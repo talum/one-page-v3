@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Aw, CRUD. I Need Some REST."
+date: 2016-05-17 22:55:01 -0400
+comments: true
+categories: ["CRUD", "REST"]
+---
+
+For a while now I've been confusing CRUD and REST. It's easy to do so when you speed through a full stack web development curriculum in the span of three months, so now that I'm a "professional programmer," it's time to really solidify the concepts. 
+
+CRUD and REST go hand in hand but are actually different principles, and although they complement each other, it's important to distinguish between them in order to apply them properly while developing web applications.
+
+##REST
+Representational state transfer, known as REST for short, is a standard architectural style that makes up the world wide web. It was introduced by Roy Fielding in 2000 and refers to the use of standard HTTP verbs to describe a request and the action the server should take in response. REST is useful because it's predictable, scalable, and simple, especially since it encourages the re-use of URIs. In other words, you can have the same URI respond differently to different verbs.
+
+The standard HTTP verbs considered RESTful are GET, POST, PUT, and DELETE. PATCH is also thrown in there sometimes. Just a note: PATCH and PUT are for the most part synonymous, but more on that later.
+
+##Breakdown of HTTP Verbs
+
+`GET` is usually used to list a collection of data, or one of the items in a collection. It purely displays information. You can GET '/resources' or a single '/resource/1' where the digit represents the resource's database id. 
+
+`POST` creates new data that likely belongs to a collection. Most often you POST to '/resources'. 
+
+`PUT` updates a collection or a member of the collection. Most often you'd PUT to '/resources/1' to trigger an update of that element.
+
+`PATCH` also updates a collection or a member of the collection, but instead of replacing the entire entry, it only updates the "delta" or differences. In most APIs, `PUT` and `PATCH` are nearly the same.
+
+`DELETE` is a destructive action. It can either destroy an entire collection or just one member of the collection. Again, you'd most likely DELETE a single entry, such as DELETE '/resources/1'.
+
+<!-- more -->
+
+##CRUD
+CRUD actions, on the other hand, refer to the "basic functions of persistent storage," according to [Wikipedia](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete). CRUD is an acronym for Create, Read, Update, and Delete. 
+
+When you combine CRUD with REST, you end up with the following seven controller actions, which align with different combinations of HTTP verbs with CRUD actions. As you can see, the verbs and paths map to controller actions. By varying the verbs, you end up being able to perform many different actions without creating a ton of path permutations. That could quickly get unwieldy, so it's best to follow the convention as much as possible.
+
+|  **Controller Action** | **HTTP VERB**     | **PATH**                |
+| -------------      | -------------  | ------              |
+|  index             | GET           |  /resources          |
+|  show              | GET           |  /resources/:id      |
+|  new               | GET           |  /resources/new      |
+|  create            | POST          |  /resources          |
+|  edit              | GET           |  /resources/:id/edit |
+|  update            | PUT           |  /resources/:id      |
+|  delete            | DELETE        |  /resources/:id      |
+
+##Best Practices, CRUD + REST
+
+A best practice many software developers follow is to keep your routes RESTful. For the longest time, I thought that meant using only CRUD actions in a controller, but the reality is that non-CRUD controller actions can still be RESTful, so long as the appropriate HTTP verbs are used to describe the action that takes place. For example: a GET request that maps to a controller action called `more_students` which is a paginated subset of `students` and returns just a list of displayed students is still RESTful. You can call the controller actions whatever you want, really, but for the sake of your future sanity and the sanity of your fellow developers, try to stick to conventions. What you wouldn't want to do is issue a POST request to fetch a list of resources or something. Or make a GET request delete a resource. That would be insane. Don't do it!
+
+So anyway, those are the main takeaways on CRUD and REST. Carry on and code. 
+
+##Further Resources
+- [Rails Routing From the Outside In](http://guides.rubyonrails.org/routing.html)
+- [RESTful API Design](http://restful-api-design.readthedocs.io/en/latest/methods.html)
