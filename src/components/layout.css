@@ -215,6 +215,10 @@ ul.list--separators-gray li {
 /* Buttons */
 .button {
 }
+.button a {
+  color: inherit;
+  fill: inherit;
+}
 .button--small {
   padding: 16px;
 }

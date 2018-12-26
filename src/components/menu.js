@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 const Menu = ({ toggleMenu, open }) => (
@@ -11,10 +12,18 @@ const Menu = ({ toggleMenu, open }) => (
       </button>
     </div>
     <ul className="menu__container">
-      <li className="menu__item">Home</li>
-      <li className="menu__item">Projects</li>
-      <li className="menu__item">Blog</li>
-      <li className="menu__item">Contact</li>
+      <li className="menu__item">
+        <Link to="/">About</Link>
+      </li>
+      <li className="menu__item">
+        <Link to="/projects">Projects</Link>
+      </li>
+      <li className="menu__item">
+        <Link to="/blog">Blog</Link>
+      </li>
+      <li className="menu__item">
+        <Link to="/contact">Contact</Link>
+      </li>
     </ul>
   </menu>
 )
