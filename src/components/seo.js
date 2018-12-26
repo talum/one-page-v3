@@ -60,6 +60,13 @@ function SEO({ description, lang, meta, keywords, title }) {
                   : []
               )
               .concat(meta)}
+            link={[
+              {
+                rel: 'stylesheet',
+                href:
+                  'https://fonts.googleapis.com/css?family=Catamaran:400,600,700|Merriweather+Sans:300,300i',
+              },
+            ]}
           />
         )
       }}
