@@ -1,7 +1,7 @@
 ---
 layout: post
 title: All About Rack
-date: 2016-12-28 17:11:59 -0500 
+date: 2016-12-28T17:11:59-05::00
 comments: true
 categories: 
 ---

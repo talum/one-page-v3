@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fixing Random, Intermittent, and Flaky RSpec Test Failures"
-date: 2018-10-27 11:54:04 -0400
+date: 2018-10-27T11:54:04-04:00
 comments: true
 categories: ['ruby', 'rspec', 'testing']
 ---

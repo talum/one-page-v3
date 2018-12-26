@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Converting Numbers Between Decimal, Binary, and Hexadecimal"
-date: 2016-06-08 20:05:06 -0400
+date: 2016-06-08T20:05:06-04:00
 comments: true
 categories: ["binary", "decimal", "hexadecimal"]
 ---

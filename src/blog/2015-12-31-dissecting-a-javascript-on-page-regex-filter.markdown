@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dissecting a JavaScript On-Page RegEx Filter"
-date: 2015-12-31 09:49:18 -0500
+date: 2015-12-31T09:49:18-05:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

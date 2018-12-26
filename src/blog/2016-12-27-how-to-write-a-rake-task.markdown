@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Write a Rake Task"
-date: 2016-12-27 16:43:51 -0500 
+date: 2016-12-27T16:43:51-05:00
 comments: true
 categories: 
 ---

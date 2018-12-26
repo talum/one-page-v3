@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Flatiron Follower, a Twitter CLI"
-date: 2015-10-20 14:10:07 -0400
+date: 2015-10-20T14:10:07-04:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

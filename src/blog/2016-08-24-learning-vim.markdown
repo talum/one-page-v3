@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Learning Vim"
-date: 2016-08-24 22:31:38 -0400
+date: 2016-08-24T22:31:38-04:00
 comments: true
 categories: ["vim"]
 ---

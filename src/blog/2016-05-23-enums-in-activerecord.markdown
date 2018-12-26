@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Enums in ActiveRecord"
-date: 2016-05-23 20:29:55 -0400
+date: 2016-05-23T20:29:55-04:00
 comments: true
 categories: ["ActiveRecord", "Enum"]
 ---

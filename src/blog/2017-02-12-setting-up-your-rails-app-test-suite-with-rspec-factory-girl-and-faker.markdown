@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting Up Your Rails App Test Suite with RSpec, Factory Girl, and Faker"
-date: 2017-02-12 13:19:02 -0500 
+date: 2017-02-12T13:19:02-05:00
 comments: true
 categories: ["testing", "Rails"]
 ---

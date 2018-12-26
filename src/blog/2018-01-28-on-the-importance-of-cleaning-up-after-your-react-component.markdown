@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "On the Importance of Cleaning Up After Your React Component"
-date: 2018-01-28 11:40:41 -0500 
+date: 2018-01-28T11:40:41-05:00
 comments: true
 categories: ["react"]
 ---

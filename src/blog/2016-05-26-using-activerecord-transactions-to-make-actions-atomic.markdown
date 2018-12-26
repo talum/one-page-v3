@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using ActiveRecord Transactions to Make Actions Atomic"
-date: 2016-05-26 21:53:58 -0400
+date: 2016-05-26T21:53:58-04:00
 comments: true
 categories: ["Active&nbsp;Record", "atomic operations"]
 ---

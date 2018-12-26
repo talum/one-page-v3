@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An Intro to Object-Oriented CSS"
-date: 2016-12-26 13:58:14 -0400
+date: 2016-12-26T13:58:14-04:00
 comments: true
 categories: 
 ---

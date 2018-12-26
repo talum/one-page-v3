@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Rails Asset Pipeline"
-date: 2017-01-12 16:06:15 -0500 
+date: 2017-01-12T16:06:15-05::00
 comments: true
 categories: 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Querying GitHub's GraphQL API"
-date: 2017-09-09 21:38:53 -0400 
+date: 2017-09-09T21:38:53-04:00
 comments: true
 categories: ["graphql", "elixir", "phoenix"]
 ---

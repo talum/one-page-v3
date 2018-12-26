@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Exporting a CSV File from Rails Console"
-date: 2016-09-07 20:14:44 -0400
+date: 2016-09-07T20:14:44-04:00
 comments: true
 categories: 
 ---

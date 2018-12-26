@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Slimming Down: Tips and Pitfalls"
-date: 2016-05-16 20:14:36 -0400
+date: 2016-05-16T20:14:36-04:00
 comments: true
 categories: ["Flatiron&nbsp;School", "Slim"]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build a Slash Command"
-date: 2017-11-06 11:16:08 -0500 
+date: 2017-11-06T11:16:08-05:00
 comments: true
 categories: ["slack", "slash command"]
 ---

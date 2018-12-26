@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Java Basics for Rubyists and JavaScripters"
-date: 2017-05-24 23:04:05 -0400 
+date: 2017-05-24T23:04:05-04:00
 comments: true
 categories: ['java', 'ruby', 'javascript']
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building an In-Browser IDE"
-date: 2017-11-22 14:06:38 -0500 
+date: 2017-11-22T14:06:38-05:00
 comments: true
 categories: ["React", "Elixir", "Redux"]
 ---

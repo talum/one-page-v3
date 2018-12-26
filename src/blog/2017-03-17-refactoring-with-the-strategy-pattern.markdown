@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Refactoring with the Strategy Pattern"
-date: 2017-03-17 08:53:39 -0400 
+date: 2017-03-17T08:53:39-04:00
 comments: true
 categories: ["refactoring", "strategy pattern"]
 ---

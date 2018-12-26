@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Build a Super Simple React Component in a Phoenix App"
-date: 2017-10-14 14:05:34 -0400 
+date: 2017-10-14T14:05:34-04:00
 comments: true
 categories: ["react", "phoenix"]
 ---

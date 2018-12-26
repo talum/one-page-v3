@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Promises in JavaScript: A Gentle Introduction"
-date: 2017-04-17 20:21:52 -0400 
+date: 2017-04-17T20:21:52-04:00
 comments: true
 categories: ["JavaScript", "promises"]
 ---

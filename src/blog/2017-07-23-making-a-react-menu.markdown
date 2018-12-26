@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Making a React Menu"
-date: 2017-07-23 10:58:40 -0400 
+date: 2017-07-23T10:58:40-04:00
 comments: true
 categories: ["react", "javascript", "ES6"] 
 ---

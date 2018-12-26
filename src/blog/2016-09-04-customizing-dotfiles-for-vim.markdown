@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Customizing Dotfiles for Vim"
-date: 2016-09-04 12:53:32 -0400
+date: 2016-09-04T12:53:32-04:00
 comments: true
 categories: ["vim", "dotfiles"]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Rails API for Use with Ember"
-date: 2016-01-26 15:12:05 -0500
+date: 2016-01-26T15:12:05-05:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

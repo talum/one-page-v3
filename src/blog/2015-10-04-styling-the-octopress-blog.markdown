@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Styling the Octopress Blog"
-date: 2015-10-04 14:57:25 -0400
+date: 2015-10-04T14:57:25-04:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

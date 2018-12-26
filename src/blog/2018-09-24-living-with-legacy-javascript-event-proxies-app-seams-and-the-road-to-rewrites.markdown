@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Living with Legacy JavaScript: Event Proxies, App Seams, and the Road to Rewrites"
-date: 2018-09-24 20:33:12 -0400
+date: 2018-09-24T20:33:12-04:00
 comments: true
 categories: ['javascript']
 ---

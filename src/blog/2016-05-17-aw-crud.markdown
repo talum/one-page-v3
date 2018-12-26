@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Aw, CRUD. I Need Some REST."
-date: 2016-05-17 22:55:01 -0400
+date: 2016-05-17T22:55:01-04:00
 comments: true
 categories: ["CRUD", "REST"]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Send More Beautiful HTML Emails with Rails"
-date: 2016-03-27 09:04:20 -0400
+date: 2016-03-27T09:04:20-04:00
 comments: true
 categories: ["Flatiron&nbsp;School", "ActionMailer", "Rails", "Email"] 
 ---

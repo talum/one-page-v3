@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Configuring Courses with YAML"
-date: 2018-04-07 12:11:24 -0400
+date: 2018-04-07T12:11:24-04:00
 comments: true
 categories: "configuration"
 ---

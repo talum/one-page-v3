@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tips for Upgrading to React 16 and React Router 4"
-date: 2017-12-02 14:09:58 -0500 
+date: 2017-12-02T14:09:58-05:00
 comments: true
 categories: ["react", "react router"]
 ---

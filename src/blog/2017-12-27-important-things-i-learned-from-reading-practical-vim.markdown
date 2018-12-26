@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Important Things I Learned from Reading Practical Vim"
-date: 2017-12-27 14:42:12 -0500 
+date: 2017-12-27T14:42:12-05:00
 comments: true
 categories: ["vim"]
 ---

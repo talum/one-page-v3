@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting Up ESLint Globally"
-date: 2017-12-28 08:59:50 -0500 
+date: 2017-12-28T08:59:50-05:00
 comments: true
 categories: ["javascript", "eslint"]
 ---

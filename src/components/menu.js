@@ -11,20 +11,28 @@ const Menu = ({ toggleMenu, open }) => (
         </svg>
       </button>
     </div>
-    <ul className="menu__container">
-      <li className="menu__item">
-        <Link to="/">About</Link>
-      </li>
-      <li className="menu__item">
-        <Link to="/projects">Projects</Link>
-      </li>
-      <li className="menu__item">
-        <Link to="/blog">Blog</Link>
-      </li>
-      <li className="menu__item">
-        <Link to="/contact">Contact</Link>
-      </li>
-    </ul>
+    <div className="menu__container">
+      <div className="menu__item">
+        <Link to="/" className="link--color-white">
+          About
+        </Link>
+      </div>
+      <div className="menu__item">
+        <Link to="/projects" className="link--color-white">
+          Projects
+        </Link>
+      </div>
+      <div className="menu__item">
+        <Link to="/blog" className="link--color-white">
+          Blog
+        </Link>
+      </div>
+      <div className="menu__item">
+        <Link to="/contact" className="link--color-white">
+          Contact
+        </Link>
+      </div>
+    </div>
   </menu>
 )
 

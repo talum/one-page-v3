@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Writing Straight Up SQL"
-date: 2016-10-29 09:58:14 -0400
+date: 2016-10-29T09:58:14-04:00
 comments: true
 categories: 
 ---

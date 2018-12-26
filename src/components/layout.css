@@ -4,12 +4,19 @@
 html, body, menu, ul, li, button, a {
 	box-sizing: border-box;
   border: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 300;
   list-style: none;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  word-break: break-word;
 }
+
+img {
+  width: 100%;
+}
+
 
 :root {
   --cream: #F7ECE1;
@@ -69,7 +76,7 @@ html, body, menu, ul, li, button, a {
   padding: 5%;
   text-align: center;
   transition: all 0.2s ease-out;
-  width: 100%;
+  width: 90%;
 }
 .menu__item:hover {
   background-color: var(--dark-purple);
@@ -168,13 +175,12 @@ html, body, menu, ul, li, button, a {
 
 /* Body */
 p {
-  font-family: 'Merriweather Sans', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
 }
 p + p {
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
 }
 
 /* Links */
@@ -187,13 +193,26 @@ a:hover {
   padding-bottom: 2px;
   border-bottom: 1px solid var(--lavender);
 }
+a.link--color-white {
+  color: var(--white);
+}
+a.link--color-white:hover {
+  padding: 0;
+  border: 0;
+}
 
 /* List */
-ul.list {
-}
-ul.list--text li {
+ol li, ul li {
+  margin: 0 var(--padding);
   padding: calc(var(--padding) / 2);
+}
+ol li {
+	list-style: decimal inside;
+}
+ul li {
   list-style: disc inside;
+}
+ul.list {
 }
 ul.list--separators-gray li {
   border-bottom: 1px solid var(--gray);
@@ -253,3 +272,67 @@ ul.list--separators-gray li {
   color: var(--gray);
   fill: var(--gray);
 }
+
+/* Code */
+ pre {
+   margin-left: 0;
+   margin-right: 0;
+   margin-top: 0;
+   padding-bottom: 0;
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 0;
+   margin-bottom: 1.45rem;
+   font-size: 0.85rem;
+   line-height: 1.42;
+   background: hsla(0, 0%, 0%, 0.04);
+   border-radius: 3px;
+   overflow: auto;
+   word-wrap: normal;
+   padding: 1.45rem;
+   max-width: 614px;
+ }
+ tt,
+ code {
+   background-color: hsla(0, 0%, 0%, 0.04);
+   border-radius: 3px;
+   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+     "Liberation Mono", Menlo, Courier, monospace;
+   padding: 0;
+   padding-top: 0.2em;
+   padding-bottom: 0.2em;
+ }
+ pre code {
+   background: none;
+   line-height: 1.42;
+ }
+ code:before,
+ code:after,
+ tt:before,
+ tt:after {
+   letter-spacing: -0.2em;
+   content: " ";
+ }
+ pre code:before,
+ pre code:after,
+ pre tt:before,
+ pre tt:after {
+   content: "";
+ }
+ code {
+   font-size: 0.85rem;
+   line-height: 1.45rem;
+ }
+
+/* todo:
+- tables
+- code pre
+- spacing between headlines
+- add headers to sections
+- add link back to main blog from post
+- add content
+- custom typography on home + whimsy
+- maybe move to module css
+- add some photos
+- jazz up 404 page
+*/

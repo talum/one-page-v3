@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How the Lights on Learn.co Work"
-date: 2018-06-14 21:18:17 -0400 
+date: 2018-06-14T21:18:17-04:00
 comments: true
 categories: 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Migrating from Octopress to Jekyll"
-date: 2016-11-20 09:58:14 -0400
+date: 2016-11-20T09:58:14-04:00
 comments: true
 categories: 
 ---

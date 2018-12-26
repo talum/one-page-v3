@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Turn a Simple React App Into a Chrome Extension"
-date: 2017-11-05 09:32:09 -0500 
+date: 2017-11-05T09:32:09-05:00
 comments: true
 categories: ["React", "Chrome"]
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using GitHub OmniAuth Login with Scopes to Access the GitHub API"
-date: 2015-11-18 20:53:55 -0500
+date: 2015-11-18T20:53:55-05:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

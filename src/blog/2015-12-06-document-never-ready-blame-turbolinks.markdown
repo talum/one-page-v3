@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Document Never Ready? Blame Turbolinks"
-date: 2015-12-06 22:31:34 -0500
+date: 2015-12-06T22:31:34-05:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

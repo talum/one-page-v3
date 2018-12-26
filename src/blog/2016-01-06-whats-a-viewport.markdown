@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "What's a Viewport? "
-date: 2016-01-06 12:50:09 -0500
+date: 2016-01-06T12:50:09-05:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

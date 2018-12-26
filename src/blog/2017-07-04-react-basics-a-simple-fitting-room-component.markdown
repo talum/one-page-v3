@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "React Basics: A Simple Fitting Room Component"
-date: 2017-07-04 17:47:24 -0400 
+date: 2017-07-04T17:47:24-04:00
 comments: true
 categories: ["react", "javascript"]
 ---

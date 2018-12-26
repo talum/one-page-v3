@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Removing Single Table Inheritance from Rails"
-date: 2018-12-08 19:26:16 -0500
+date: 2018-12-08T19:26:16-05:00
 comments: true
 categories: ["rails"]
 ---

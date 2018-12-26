@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How and When to Start Using tmux"
-date: 2018-03-03 22:22:10 -0500
+date: 2018-03-03T22:22:10-05:00
 comments: true
 categories: ["tmux"]
 ---

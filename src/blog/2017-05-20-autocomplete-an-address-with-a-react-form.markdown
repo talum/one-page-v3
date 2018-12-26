@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Autocomplete an Address with a React Form"
-date: 2017-05-20 13:38:14 -0400 
+date: 2017-05-20T13:38:14-04:00
 comments: true
 categories: ['react', 'google maps']
 ---

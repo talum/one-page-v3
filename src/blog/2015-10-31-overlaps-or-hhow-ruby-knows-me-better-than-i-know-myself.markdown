@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Overlaps with Ranges and How Ruby Just Gets Me"
-date: 2015-10-31 18:55:00 -0400
+date: 2015-10-31T18:55:00-04:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

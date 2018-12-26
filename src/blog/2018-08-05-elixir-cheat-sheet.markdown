@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Which Data Structure Should I Use? An Elixir Cheat Sheet"
-date: 2018-08-05 10:14:24 -0400
+date: 2018-08-05T10:14:24-04:00
 comments: true
 categories: ['elixir']
 ---

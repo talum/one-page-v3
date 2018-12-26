@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Benefits of Semantic HTML"
-date: 2015-12-21 17:55:09 -0500
+date: 2015-12-21T17:55:09-05:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---

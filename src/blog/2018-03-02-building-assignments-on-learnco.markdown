@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building Assignments on Learn.co"
-date: 2018-03-02 20:38:22 -0500 
+date: 2018-03-02T20:38:22-05:00
 comments: true
 categories: ["react", "redux"]
 ---

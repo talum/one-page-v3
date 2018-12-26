@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "3 Ways to Improve Your Mobile Dev Workflow"
-date: 2017-09-11 22:49:18 -0400 
+date: 2017-09-11T22:49:18-04:00
 comments: true
 categories: ["mobile"]
 ---

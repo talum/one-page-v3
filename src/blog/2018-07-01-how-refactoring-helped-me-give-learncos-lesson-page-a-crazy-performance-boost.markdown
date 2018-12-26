@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How Refactoring Helped Me Give Learn.co's Lesson Page a Crazy Performance Boost"
-date: 2018-07-01 14:07:10 -0400
+date: 2018-07-01T14:07:10-04:00
 comments: true
 categories: ["performance", "sql"]
 ---

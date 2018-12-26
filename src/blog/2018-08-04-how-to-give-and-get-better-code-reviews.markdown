@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Give and Get Better Code Reviews"
-date: 2018-08-04 12:20:01 -0400
+date: 2018-08-04T12:20:01-04:00
 comments: true
 categories: ['code review', 'team']
 ---

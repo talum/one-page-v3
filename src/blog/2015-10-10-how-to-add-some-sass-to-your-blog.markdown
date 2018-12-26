@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Add Some Sass to Your Blog"
-date: 2015-10-10 20:08:29 -0400
+date: 2015-10-10T20:08:29-04:00
 comments: true
 categories: "Flatiron&nbsp;School"
 ---
