@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -81,13 +81,14 @@ const projectsList = [
 const Projects = () => (
   <Layout>
     <SEO title="Projects" />
-    <h1 className="heading heading--level-1">Projects</h1>
-    {projectsList.map(project => (
-      <>
-        <h2>{project.title}</h2>
-        <h3>{project.tech}</h3>
+    <h1 className="heading heading--level-1 util--text-align-c">Projects</h1>
+    {projectsList.map((project, i) => (
+      <Fragment key={i}>
+        <h2 className="heading heading--level-3">{project.title}</h2>
+        <h3 className="heading heading--level-4">{project.tech}</h3>
+        <h3 className="heading heading--level-4">{project.integrations}</h3>
         <p>{project.description}</p>
-      </>
+      </Fragment>
     ))}
   </Layout>
 )

@@ -4,7 +4,7 @@
 html, body, menu, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
 	box-sizing: border-box;
   border: 0;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Helvetica', sans-serif;
 	font-weight: 300;
   list-style: none;
   margin: 0;
@@ -54,7 +54,6 @@ img {
 .menu {
   background-color: var(--dark-purple);
   color: var(--cream);
-  font-family: 'Merriweather Sans', sans-serif;
   font-size: 0.9rem;
   font-weight: 300;
   height: 100vh;
@@ -194,6 +193,11 @@ img {
 .heading--level-5 {
   font-size: 0.87rem;
   line-height: 1.1rem;
+}
+
+/* Utils */
+.util--text-align-c {
+  text-align: center;
 }
 
 /* Body */
@@ -349,10 +353,6 @@ ul.list--separators-gray li {
 - code pre
 - spacing between headlines
 - add headers to sections
-- add link back to main blog from post
-- add content
-- custom typography on home + whimsy
 - maybe move to module css
-- add some photos
 - jazz up 404 page
 */

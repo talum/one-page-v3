@@ -64,7 +64,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 rel: 'stylesheet',
                 href:
-                  'https://fonts.googleapis.com/css?family=Catamaran:400,600,700|Merriweather+Sans:300,300i',
+                  'https://fonts.googleapis.com/css?family=Catamaran:400,600,700',
               },
             ]}
           />

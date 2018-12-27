@@ -2,6 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
+const menuItems = [
+  { title: 'About', path: '/' },
+  { title: 'Projects', path: '/projects' },
+  { title: 'Blog', path: '/blog' },
+  { title: 'Contact', path: '/contact' },
+]
+
 const Menu = ({ toggleMenu, open }) => (
   <menu id="js--menu" className="menu" data-open={open}>
     <div id="js--menu-close" className="menu__close" onClick={toggleMenu}>
@@ -12,26 +19,13 @@ const Menu = ({ toggleMenu, open }) => (
       </button>
     </div>
     <div className="menu__container">
-      <div className="menu__item">
-        <Link to="/" className="link--color-white">
-          About
-        </Link>
-      </div>
-      <div className="menu__item">
-        <Link to="/projects" className="link--color-white">
-          Projects
-        </Link>
-      </div>
-      <div className="menu__item">
-        <Link to="/blog" className="link--color-white">
-          Blog
-        </Link>
-      </div>
-      <div className="menu__item">
-        <Link to="/contact" className="link--color-white">
-          Contact
-        </Link>
-      </div>
+      {menuItems.map(item => (
+        <div key={item.title} className="menu__item">
+          <Link to={item.path} className="link--color-white">
+            {item.title}
+          </Link>
+        </div>
+      ))}
     </div>
   </menu>
 )
