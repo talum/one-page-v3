@@ -3,6 +3,22 @@ import { Link } from 'gatsby'
 import Image from './image.js'
 import './intro.css'
 
+let timeout = null
+
+const toggleConfetti = () => {
+  const target = document.getElementById('js--whimsy')
+  const animationName = 'confetti'
+  const animationTime = 4000
+
+  if (!timeout) {
+    target.classList.add(animationName)
+    timeout = setTimeout(() => {
+      target.classList.remove(animationName)
+      timeout = null
+    }, animationTime)
+  }
+}
+
 const Intro = () => (
   <>
     <div className="flex-container">
@@ -11,7 +27,23 @@ const Intro = () => (
           I am <span className="heading--highlight">Tracy Lum</span>, a
           full-stack software engineer living in New York. I write primarily
           Ruby, JavaScript, Elixir, and CSS. My passions include well-designed
-          code and whimsy.
+          code and{' '}
+          <span id="js--whimsy" className="whimsy" onMouseOver={toggleConfetti}>
+            whimsy
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+            <span className="particle" />
+          </span>
+          .
         </h1>
       </div>
       <div className="flex__item">

@@ -9,3 +9,104 @@
 .heading--highlight {
 }
 
+.confetti {
+}
+.whimsy {
+	position: relative;
+}
+
+.confetti .particle {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+}
+
+.confetti .particle:nth-of-type(1) {
+  background-color: var(--dark-purple);
+  animation: confetti 3s ease-in;
+}
+.confetti .particle:nth-of-type(2) {
+  left: -20%;
+  background-color: var(--gray);
+  animation: confetti 3s ease-in 0.4s;
+}
+.confetti .particle:nth-of-type(3) {
+  left: -22%;
+  background-color: var(--purple);
+  animation: confetti 3s ease-in 0.2s;
+}
+.confetti .particle:nth-of-type(4) {
+  left: 22%;
+  background-color: var(--lavender);
+  animation: confetti 3s ease-in 1s;
+}
+.confetti .particle:nth-of-type(5) {
+  left: 25%;
+  background-color: var(--purple) ;
+  animation: confetti 3s ease-in 0.2s;
+}
+.confetti .particle:nth-of-type(6) {
+  left: 30%;
+  background-color: var(--gray-light);
+  animation: confetti 3s ease-in 0.12s;
+}
+.confetti .particle:nth-of-type(7) {
+  left: 40%;
+  background-color: var(--dark-purple);
+  animation: confetti 3s ease-in 0.45s;
+}
+.confetti .particle:nth-of-type(8) {
+  left: 50%;
+  background-color: var(--purple);
+  animation: confetti 3s ease-in 0.2s;
+}
+.confetti .particle:nth-of-type(9) {
+  left: 60%;
+  background-color: var(--dark-purple) ;
+  animation: confetti 3s ease-in 0.9s;
+}
+.confetti .particle:nth-of-type(9) {
+  left: 70%;
+  background-color: var(--lavender);
+  animation: confetti 4s ease-in 0.3s;
+}
+.confetti .particle:nth-of-type(10) {
+  left: 80%;
+  background-color: var(--lavender);
+  animation: confetti 2s ease-in 0.1s;
+}
+.confetti .particle:nth-of-type(11) {
+  left: 90%;
+  background-color: var(--gray);
+  animation: confetti 2s ease-in 0.8s;
+}
+.confetti .particle:nth-of-type(12) {
+  left: 90%;
+  background-color: var(--lavender);
+  animation: confetti 2s ease-in 0.3s;
+}
+
+
+/* Credit to https://codepen.io/z-/pen/bpxgWZ for the animation */
+@keyframes confetti {
+   0% {
+    opacity:0;
+    transform:translateY(0%) rotate(0deg);
+   }
+   10% {
+    opacity:1;
+   }
+   35% {
+    transform:translateY(-800%) rotate(270deg);
+   }
+   80% {
+    opacity:1;
+   }
+   100% {
+    opacity:0;
+    transform:translateY(1000%) rotate(1440deg);
+   }
+}
