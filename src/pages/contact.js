@@ -9,7 +9,9 @@ const Contact = () => (
       title="Contact"
       meta={[{ name: 'robots', content: 'noindex, nofollow' }]}
     />
-    <h1 className="heading heading--level-1 util--text-align-c">Contact</h1>
+    <h1 className="heading heading--level-1 util--text-align-c util--padding-bxxl">
+      Contact
+    </h1>
     <p>
       If you want to get in touch, I'm more likely to respond on{' '}
       <a

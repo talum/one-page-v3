@@ -166,9 +166,14 @@ img {
   font-family: 'Catamaran', sans-serif;
   font-weight: 600;
 }
+.heading a:hover {
+  /* no underline for headline links */
+  padding-bottom: 0;
+  border: 0;
+}
 .heading--level-1 {
   font-size: 3rem;
-  line-height: 2.7rem;
+  line-height: 3.4rem;
 }
 .heading--level-2 {
   font-size: 2.25rem;
@@ -192,9 +197,13 @@ img {
   text-align: center;
 }
 
-.util--padding-bm {
-  padding-bottom: var(--default-padding);
-}
+
+.util--padding-tl   { padding-top: calc(2 * var(--default-padding)); }
+.util--padding-bs   { padding-bottom: calc( 0.5 * var(--default-padding)); }
+.util--padding-bm   { padding-bottom: var(--default-padding); }
+.util--padding-bl   { padding-bottom: calc(2 * var(--default-padding)); }
+.util--padding-bxl  { padding-bottom: calc(3 * var(--default-padding)); }
+.util--padding-bxxl { padding-bottom: calc(4 * var(--default-padding)); }
 
 /* Body */
 p {

@@ -81,7 +81,9 @@ const projectsList = [
 const Projects = () => (
   <Layout>
     <SEO title="Projects" />
-    <h1 className="heading heading--level-1 util--text-align-c">Projects</h1>
+    <h1 className="heading heading--level-1 util--text-align-c util--padding-bxxl">
+      Projects
+    </h1>
     {projectsList.map((project, i) => (
       <Fragment key={i}>
         <h2 className="heading heading--level-3">{project.title}</h2>

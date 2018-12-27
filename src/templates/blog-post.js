@@ -1,16 +1,20 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
+      <SEO />
+      <h1 className="heading heading--level-1">{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <Link to="/blog" className="heading heading--level-4">
-        Back to Blog
-      </Link>
+      <div className="util--padding-tl">
+        <Link to="/blog" className="heading heading--level-4">
+          Back to Blog
+        </Link>
+      </div>
     </Layout>
   )
 }
