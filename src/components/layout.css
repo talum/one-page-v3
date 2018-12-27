@@ -14,7 +14,7 @@ html, body, menu, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin: 0;
+  margin: 1.75rem 0;
 }
 
 img {
@@ -201,9 +201,6 @@ p {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
-}
-p + p {
-  padding: 1.25rem 0;
 }
 
 /* Links */

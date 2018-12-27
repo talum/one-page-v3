@@ -16,7 +16,7 @@ const Intro = () => (
       </div>
       <div className="flex__item">
         <div className="module">
-          <div class="img-frame img-frame--round img-frame--medium image-frame--white-border">
+          <div className="img-frame img-frame--round img-frame--medium image-frame--white-border">
             <Image />
           </div>
         </div>
