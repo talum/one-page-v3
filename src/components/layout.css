@@ -1,7 +1,7 @@
 /* Reset */
 
 /* CSS Reset */
-html, body, menu, ul, li, button, a {
+html, body, menu, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
 	box-sizing: border-box;
   border: 0;
   font-family: 'Merriweather Sans', sans-serif;
@@ -11,6 +11,10 @@ html, body, menu, ul, li, button, a {
   padding: 0;
   text-decoration: none;
   word-break: break-word;
+}
+
+p {
+  margin: 0;
 }
 
 img {
@@ -43,7 +47,7 @@ img {
   position: fixed;
   right:  0;
   top:    0;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Menu */
@@ -61,7 +65,7 @@ img {
   top: 0;
   transition: left 0.2s ease;
   width:  20vw;
-  z-index: 2;
+  z-index: 3;
 }
 .menu[data-open='true'] {
   left: 0;
@@ -99,6 +103,7 @@ img {
   padding: 0 10%;
   position: fixed;
   width: 80%;
+  z-index: 1;
 }
 
 /* Grid */
@@ -147,6 +152,24 @@ img {
   }
 }
 
+/* Image Frame */
+.img-frame {
+}
+.img-frame--medium {
+  height: 100px;
+  width: 100px;
+}
+.img-frame--round {
+  border-radius: 9999px;
+}
+.img-frame--round img {
+  border-radius: 9999px;
+}
+.image-frame--white-border {
+  border: 3px solid white;
+  box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.3);
+}
+
 /* Typography */
 .heading {
   font-family: 'Catamaran', sans-serif;
@@ -180,7 +203,7 @@ p {
   line-height: 1.7;
 }
 p + p {
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
 }
 
 /* Links */
