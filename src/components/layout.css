@@ -13,10 +13,6 @@ html, body, menu, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
   word-break: break-word;
 }
 
-p {
-  margin: 1.75rem 0;
-}
-
 img {
   width: 100%;
 }
@@ -28,8 +24,10 @@ img {
   --gray-light: #e2e2e2;
   --gray: #202020;
   --lavender: #8D86C9;
-  --padding: 12px;
+  --white: #FFFFFF;
+  --default-padding: 12px;
   --purple: #725AC1;
+  --menu-width: 20vw;
   color: var(--gray);
   font-size: 16px;
 }
@@ -57,13 +55,13 @@ img {
   font-size: 0.9rem;
   font-weight: 300;
   height: 100vh;
-  left: -20vw;
+  left: calc(-1 * var(--menu-width));
   letter-spacing: 2px;
   position: fixed;
   text-transform: lowercase;
   top: 0;
   transition: left 0.2s ease;
-  width:  20vw;
+  width: var(--menu-width);
   z-index: 3;
 }
 .menu[data-open='true'] {
@@ -83,7 +81,6 @@ img {
 }
 .menu__item:hover {
   background-color: var(--dark-purple);
-  color: var(--purple);
   filter: brightness(150%);
   opacity: 0.9;
 }
@@ -93,11 +90,12 @@ img {
 
 /* Header */
 .header {
+  --header-height: 50px;
   align-items: center;
-  background-color: white;
+  background-color: var(--white);
   border-bottom: 1px solid var(--gray-light);
   display: flex;
-  height: 50px;
+  height: var(--header-height);
   justify-content: space-between;
   padding: 0 10%;
   position: fixed;
@@ -120,10 +118,6 @@ img {
 }
 /* Mega Screens */
 @media only screen and (min-width: 1367px) {
-  .menu {
-    left: -20vw;
-    width: 20vw;
-  }
   .grid {
     grid-template-columns: 10% 1fr 768px 1fr 10%;
   }
@@ -131,23 +125,21 @@ img {
 
 /* Half Screen & Tablet */
 @media only screen and (max-width: 640px) {
+  :root {
+    --menu-width: 40vw;
+  }
   .grid {
     grid-template-columns: 10% 1fr 10%;
   }
   .main {
     grid-column: 2 / 3;
   }
-  .menu {
-    left: -40vw;
-    width: 40vw;
-  }
 }
 
 /* Mobile */
 @media only screen and (max-width: 400px) {
-  .menu {
-    left: -50vw;
-    width: 50vw;
+  :root {
+    --menu-width: 100vw;
   }
 }
 
@@ -156,7 +148,7 @@ img {
 }
 .img-frame--medium {
   height: 100px;
-  width: 100px;
+  width:  100px;
 }
 .img-frame--round {
   border-radius: 9999px;
@@ -200,8 +192,13 @@ img {
   text-align: center;
 }
 
+.util--padding-bm {
+  padding-bottom: var(--default-padding);
+}
+
 /* Body */
 p {
+  margin: 1.75rem 0;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.7;
@@ -244,10 +241,10 @@ ul.list--separators-gray li {
 
 /* Module */
 .module {
-  padding: var(--padding);
+  padding: var(--default-padding);
 }
 .module--padding-small {
-  padding: calc(var(--padding) / 2);
+  padding: calc(var(--default-padding) / 2);
 }
 
 /* Flex Container */
@@ -257,20 +254,21 @@ ul.list--separators-gray li {
 
 /* Buttons */
 .button {
+  --button--small-size: 16px;
 }
 .button a {
   color: inherit;
   fill: inherit;
 }
 .button--small {
-  padding: 16px;
+  padding: var(--button--small-size);
 }
 .button--small svg {
-  height: 16px;
-  left: -4px;
+  height: var(--button--small-size);
+  left: calc(-1 * var(--button--small-size) / 4);
   position: absolute;
-  top: -4px;
-  width: 16px;
+  top: calc(-1 * var(--button--small-size) / 4);
+  width: var(--button--small-size);
 }
 .button--with-svg {
   background-color: transparent;
@@ -282,15 +280,15 @@ ul.list--separators-gray li {
   transition: all 1s ease;
 }
 .button--with-svg svg {
-  padding: 12px;
+  padding: var(--default-padding);
   position: absolute;
 }
 .svg-container {
-  padding: 12px;
+  padding: var(--default-padding);
 }
 .button--color-white {
-  color: white;
-  fill: white;
+  color: var(--white);
+  fill: var(--white);
 }
 .button--color-gray {
   color: var(--gray);
@@ -316,6 +314,7 @@ ul.list--separators-gray li {
    padding: 1.45rem;
    max-width: 614px;
  }
+
  tt,
  code {
    background-color: hsla(0, 0%, 0%, 0.04);
@@ -352,7 +351,5 @@ ul.list--separators-gray li {
 - tables
 - code pre
 - spacing between headlines
-- add headers to sections
-- maybe move to module css
 - jazz up 404 page
 */
