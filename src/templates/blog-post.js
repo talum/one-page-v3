@@ -7,13 +7,15 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <SEO />
-      <h1 className="heading heading--level-1">{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <div className="util--padding-tl">
-        <Link to="/blog" className="heading heading--level-4">
-          Back to Blog
-        </Link>
+      <div className="blog">
+        <SEO title={post.frontmatter.title} />
+        <h1 className="heading heading--level-1">{post.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className="util--padding-tl">
+          <Link to="/blog" className="heading heading--level-4">
+            Back to Blog
+          </Link>
+        </div>
       </div>
     </Layout>
   )

@@ -6,10 +6,6 @@
   font-size: 2rem;
   line-height: 1.2;
 }
-.heading--fancy::first-line {
-  font-size: 2.5rem;
-}
 .heading--highlight {
-  color: var(--purple);
 }
 

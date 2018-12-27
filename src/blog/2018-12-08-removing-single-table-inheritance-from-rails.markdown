@@ -170,39 +170,39 @@ Here are examples of each strategy.
 **1a. Replace the method behavior or query**
 Some of the replacements are pretty straightforward. You put the feature flag in place to say "call this code instead of this other code when this flag is on."
 
-<script src="https://gist.github.com/talum/3ddd742ba8259655b83a9af819d5d696.js"></script>
+`gist:talum/3ddd742ba8259655b83a9af819d5d696`
 
 So instead of querying based on contents, here we query based on `canonical_material`.
 
 **1b. Change the method at the call site**
 Sometimes, it's easier to replace the method at the call site to standardize the methods called. (You should run your test suite and/or write tests when you do this.) Doing so can open up the path to further refactoring.
 
-<script src="https://gist.github.com/talum/7d45d401e93c058a21612a10890e5c9d.js"></script>
+`gist:talum/7d45d401e93c058a21612a10890e5c9d`
 
 This example demonstrates how to break the dependency on the `canonical_id` column, which will soon no longer exist. Notice that we replaced the method at the call site without putting that behind a feature flag. In doing this refactoring, we noticed that we plucked the `canonical_id` in more than one place, so we wrapped up the logic to do that in another method that we could chain onto other queries. The method at the call site was changed, but the behavior didn't change until the feature flag was turned on.
 
 **2. Write new methods and call them behind a feature flag at the call site**
 This strategy is related to the method replacement, only in this one, we write a new method and call it behind a feature flag at the call site. It was especially useful for a method that was only called in one place. It also enabled us to give the method a better signature- always useful.
 
-<script src="https://gist.github.com/talum/09624fdbfdb3705c5f1f1a863cf461a2.js"></script>
+`gist:talum/09624fdbfdb3705c5f1f1a863cf461a2`
 
 
 **3. Break dependencies on associations with methods**
 
 In this next example, a track `has_many` labs. Because we know that the `has_many` association adds utility methods, we replaced the one most commonly called and removed the `has_many :labs` line. This method conforms to the same interface, so anything that was calling the method before the feature was turned on would continue to work.
 
-<script src="https://gist.github.com/talum/15cb9886eeac36fcc8e6a63a3781ee42.js"></script>
+`gist:talum/15cb9886eeac36fcc8e6a63a3781ee42`
 
 **4. Raise errors behind a feature flag if you're unsure about a method**
 There were some times that we weren't sure whether we missed a call site. So, instead of just hard removing methods at first, we intentionally raised errors so we could catch them during the manual testing phase. This gave us a better way to track down where a method was being called.
 
-<script src="https://gist.github.com/talum/087ba1606ea428a46c7c19ce5d7f3c01.js"></script>
+`gist:talum/087ba1606ea428a46c7c19ce5d7f3c01`
 
 **5. Swap in objects that have the same interface**
 
 Because we wanted to get rid of the lab association, we rewrote the implementation of the `lab?` method. Instead of checking for the presence of a `lab` record, we swapped in the `canonical_material`, delegated the call, and made that object respond to the same method.
 
-<script src="https://gist.github.com/talum/94cb3083d370d5f32ed964eec06a094f.js"></script>
+`gist:talum/94cb3083d370d5f32ed964eec06a094f`
 
 These were the most helpful strategies for breaking dependencies and swapping in new objects throughout our Rails monolith. After reviewing the hundreds of definitions and call sites, we replaced or rewrote them one by one. It's a tedious process that I don't wish on anyone, but it was ultimately extremely helpful for making our codebase more legible and for removing old code that was sitting around doing nothing. It took several frustrating and hair-pulling weeks to get to the end, but once we had replaced the majority of the references, we began to do manual testing.
 

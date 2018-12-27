@@ -1,7 +1,7 @@
 /* Reset */
 
 /* CSS Reset */
-html, body, menu, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
+html, body, menu, ol, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
 	box-sizing: border-box;
   border: 0;
   font-family: 'Helvetica', sans-serif;
@@ -233,14 +233,14 @@ a.link--color-white:hover {
 
 /* List */
 ol li, ul li {
-  margin: 0 var(--padding);
-  padding: calc(var(--padding) / 2);
+  margin: 0 calc(var(--default-padding) * 3);
+  padding: calc(var(--default-padding) / 2);
 }
 ol li {
-	list-style: decimal inside;
+	list-style: decimal outside;
 }
 ul li {
-  list-style: disc inside;
+  list-style: disc outside;
 }
 ul.list {
 }
@@ -304,6 +304,11 @@ ul.list--separators-gray li {
   fill: var(--gray);
 }
 
+/* Blog */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
 /* Code */
  pre {
    margin-left: 0;
@@ -355,6 +360,11 @@ ul.list--separators-gray li {
    font-size: 0.85rem;
    line-height: 1.45rem;
  }
+
+.gist {
+  max-width: 614px;
+}
+
 
 /* todo:
 - tables
