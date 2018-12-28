@@ -24,10 +24,9 @@ const Intro = () => (
     <div className="flex-container">
       <div className="flex__item">
         <h1 className="heading heading--fancy">
-          I am <span className="heading--highlight">Tracy Lum</span>, a
-          full-stack software engineer living in New York. I write primarily
-          Ruby, JavaScript, Elixir, and CSS. My passions include well-designed
-          code and{' '}
+          I am Tracy Lum, a full-stack software engineer living in New York. I
+          write primarily Ruby, JavaScript, Elixir, and CSS. My passions include
+          well-designed code and{' '}
           <span id="js--whimsy" className="whimsy" onMouseOver={toggleConfetti}>
             whimsy
             <span className="particle" />

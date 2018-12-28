@@ -134,6 +134,12 @@ img {
   .main {
     grid-column: 2 / 3;
   }
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  .heading--fancy {
+    font-size: 1rem;
+  }
+}
 }
 
 /* Mobile */
@@ -259,6 +265,13 @@ ul.list--separators-gray li {
 /* Flex Container */
 .flex-container {
   display: flex;
+}
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  .flex-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* Buttons */

@@ -1,12 +1,15 @@
-.heading {
-}
 .heading--fancy {
   font-family: 'Catamaran', sans-serif;
   font-weight: 600;
   font-size: 2rem;
   line-height: 1.2;
 }
-.heading--highlight {
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+  .heading--fancy {
+    font-size: 1.5rem;
+  }
 }
 
 .confetti {
