@@ -34,7 +34,7 @@ const projectsList = [
     tech: 'Phoenix, Docker',
     integrations: 'Learn-co Gem Suite, GitHub',
     description:
-      'This project leveraged the IDE backend to persist work done in a sandbox repository. It uses most of the same tech as the regular old lesson, except work follows students around through readmes.',
+      'This project leveraged the IDE backend to persist work done in a sandbox repository. It uses most of the same tech as the regular old IDE for lessons with labs, except work follows students around through readmes as they navigate through the curriculum hierarchy on Learn.co.',
   },
   {
     title: 'Assignments',
@@ -42,7 +42,7 @@ const projectsList = [
     tech: 'Rails, React',
     integrations: 'Learn-co Gem Suite, GitHub',
     description:
-      'One of the problems we faced as our business grew was keeping track of one-off assignments for in-person immersive students. Although the core of Learn.co is a learning management system, it delivers a rigid hierarchy of curriculum to groups of students and does not allow for one-offs. Assignments addresses that problem by providing a way to assign individual students things to do, from one-off confirmable tasks to code challenges. Working closely with a team and the educational staff, I served as the project lead on this team and ensured that we were delivering the highest value feature sets as quickly as possible.',
+      'One of the problems we faced as our business grew was keeping track of one-off assignments for in-person immersive students. Although the core of Learn.co is a learning management system, it delivers a rigid hierarchy of curriculum to groups of students and does not allow for tasks to be assigned to individuals. The Assignments feature addresses that problem by providing a way to assign individual students things to do, from one-off confirmable tasks to code challenges. Working closely with a team of engineers and the educational staff, I served as the project lead on this feature and ensured that we were delivering the highest value feature sets as quickly as possible.',
   },
   {
     title: 'Learn In-browser IDE',
@@ -58,7 +58,7 @@ const projectsList = [
     tech: 'Rails',
     integrations: 'Stripe',
     description:
-      "Online courses on Learn.co are billed using Stripe Subscriptions in a domain we call Enrollments. Along with our architect, I worked on migrating to a new subscription-based workflow, where students can enroll for an online course with financing. This required a number of changes to the existing enrollment flow, including giving the student a 14-day window or trial period to obtain financing, creating admin-facing tools to change the student's status upon loan approval, and setting up new banners and emails to help students understand where they were in the enrollment process. In addition to that work, I paired with another developer to create a set of admin-facing tools that would enable enrollment pauses in the event that a student needed to take a leave of absence from the program.",
+      "Online courses on Learn.co are billed using Stripe Subscriptions in a domain we call Enrollments. Along with our architect, I worked on migrating to a new subscription-based workflow where students can enroll for an online course with financing. This required a number of changes to the existing enrollment flow, including giving the student a 14-day window or trial period to obtain financing, creating admin-facing tools to change the student's status upon loan approval, and setting up new banners and emails to help students understand where they were in the enrollment process. In addition to that work, I paired with another developer to create a set of admin-facing tools that would enable enrollment pauses in the event that a student needed to take a leave of absence from the program.",
   },
   {
     title: 'Onboarding',
@@ -74,7 +74,7 @@ const projectsList = [
     tech: 'Rails, Backbone, Marionette',
     integrations: 'GitHub',
     description:
-      "Because blogging as a developer is a good way to solidify your knowledge and share knowledge with the community, we integrated blogging into the Learn.co platform using GitHub and GitHub pages. I assisted with the initial implementation of blogging in Learn, and then built out a magazine to showcase our students' posts.",
+      "Because blogging as a developer is a good way to solidify your knowledge and share knowledge with the community, we integrated blogging into the Learn.co platform using GitHub and GitHub pages. I assisted with the initial implementation of blogging in Learn, and then built out a publicly available magazine to showcase our students' posts.",
   },
 ]
 
