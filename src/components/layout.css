@@ -309,6 +309,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+/* Highlight */
+
+::moz-selection {
+  color: var(--white);
+  background: var(--purple);
+}
+
+::selection {
+  color: var(--white);
+  background: var(--purple);
+}
+
+
 /* Code */
  pre {
    margin-left: 0;
