@@ -3,7 +3,7 @@ layout: post
 title: "An Idiot's Guide to Leveling Up with Ember"
 date: 2016-01-28T08:43:15-05:00
 comments: true
-categories: ["Flatiron&nbsp;School", "Ember"] 
+categories:
 ---
 
 ##Basics of Building an Ember App
