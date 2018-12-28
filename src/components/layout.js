@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import Menu from './Menu'
+import Menu from './menu'
 import './layout.css'
 
 class Layout extends React.Component {
