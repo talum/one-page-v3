@@ -43,8 +43,18 @@ module.exports = {
             options: {
               username: 'talum',
               includeDefaultCss: true,
-            }
-          }
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
         ]
       },
     },
@@ -57,23 +67,6 @@ module.exports = {
         respectDNT: true,
       },
     },
-{
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        {
-          resolve: `gatsby-remark-prismjs`,
-          options: {
-            classPrefix: "language-",
-            inlineCodeMarker: null,
-            aliases: {},
-            showLineNumbers: false,
-            noInlineHighlight: false,
-          },
-        },
-      ],
-    },
-  },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
