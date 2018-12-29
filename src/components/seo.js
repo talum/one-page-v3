@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import favicon16 from '../images/favicon16x16.png'
+import favicon32 from '../images/favicon32x32.png'
+
 import { StaticQuery, graphql } from 'gatsby'
 
 function SEO({ description, lang, meta, keywords, title }) {
@@ -65,6 +68,18 @@ function SEO({ description, lang, meta, keywords, title }) {
                 rel: 'stylesheet',
                 href:
                   'https://fonts.googleapis.com/css?family=Catamaran:400,600,700',
+              },
+              {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '16x16',
+                href: `${favicon16}`,
+              },
+              {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '32x32',
+                href: `${favicon32}`,
               },
             ]}
           />
