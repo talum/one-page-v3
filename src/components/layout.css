@@ -121,6 +121,9 @@ img {
   .grid {
     grid-template-columns: 10% 1fr 768px 1fr 10%;
   }
+  .main {
+    grid-column: 2 / 3;
+  }
 }
 
 /* Half Screen & Tablet */
@@ -129,7 +132,7 @@ img {
     --menu-width: 40vw;
   }
   .grid {
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 10% 80% 10%;
   }
   .main {
     grid-column: 2 / 3;
@@ -140,6 +143,9 @@ img {
 @media only screen and (max-width: 400px) {
   :root {
     --menu-width: 100vw;
+  }
+  .grid {
+    grid-template-columns: 5% 90% 5%;
   }
 }
 
