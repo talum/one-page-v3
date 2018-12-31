@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -85,12 +85,12 @@ const Projects = () => (
       Projects
     </h1>
     {projectsList.map((project, i) => (
-      <Fragment key={i}>
+      <div key={i} className="util--padding-bxl">
         <h2 className="heading heading--level-3">{project.title}</h2>
         <h3 className="heading heading--level-4">{project.tech}</h3>
         <h3 className="heading heading--level-4">{project.integrations}</h3>
         <p>{project.description}</p>
-      </Fragment>
+      </div>
     ))}
   </Layout>
 )

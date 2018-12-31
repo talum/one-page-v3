@@ -14,7 +14,7 @@ export default ({ data }) => {
         {data.allMarkdownRemark.totalCount} Posts
       </h4>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
+        <div key={node.id} className="util--padding-bxl">
           <h3 className="heading heading--level-3 util--padding-bm">
             <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
           </h3>
