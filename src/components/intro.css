@@ -10,6 +10,9 @@
 
 /* Mobile */
 @media only screen and (max-width: 400px) {
+  .heading--highlight {
+    font-size: 2rem;
+  }
   .heading--fancy {
     font-size: 1.5rem;
   }
