@@ -5,7 +5,7 @@ html, body, menu, ol, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
 	box-sizing: border-box;
   border: 0;
   font-family: 'Helvetica', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -180,14 +180,17 @@ img {
 .heading--level-1 {
   font-size: 3rem;
   line-height: 3.4rem;
+  letter-spacing: -0.12rem;
 }
 .heading--level-2 {
   font-size: 2.25rem;
   line-height: 2.2rem;
+  letter-spacing: -0.06rem;
 }
 .heading--level-3 {
   font-size: 1.75rem;
   line-height: 1.7rem;
+  letter-spacing: -0.02rem;
 }
 .heading--level-4 {
   font-size: 1rem;
@@ -213,11 +216,42 @@ img {
 
 /* Body */
 p {
-  margin: 1.75rem 0;
+  margin: 1.5rem 0;
   font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.5;
 }
+
+/* Blog */
+.blog h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.blog h2 {
+  margin-top: 3rem;
+  letter-spacing: -0.03rem;
+}
+
+.blog h3 {
+  margin-top: 2rem;
+}
+
+.blog h4 {
+  margin-top: 1rem;
+}
+
+/* Highlight */
+
+::moz-selection {
+  color: var(--white);
+  background: var(--purple);
+}
+
+::selection {
+  color: var(--white);
+  background: var(--purple);
+}
+
+
 
 /* Links */
 a {
@@ -317,24 +351,6 @@ ul.list--separators-gray li {
   fill: var(--gray);
 }
 
-/* Blog */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
-
-/* Highlight */
-
-::moz-selection {
-  color: var(--white);
-  background: var(--purple);
-}
-
-::selection {
-  color: var(--white);
-  background: var(--purple);
-}
-
-
 /* Code */
  pre {
    margin-left: 0;
@@ -394,6 +410,5 @@ h1, h2, h3, h4, h5, h6 {
 
 /* todo:
 - tables
-- spacing between headlines
 - jazz up 404 page
 */
