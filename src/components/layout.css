@@ -85,7 +85,7 @@ img {
   opacity: 0.9;
 }
 .menu__close {
-  padding: 15px 0 0 25px;
+  padding: var(--default-padding) 0 0 calc(2 * var(--default-padding));
 }
 
 /* Header */
@@ -106,7 +106,7 @@ img {
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: 10% 1fr 3fr 1fr 10%;
+  grid-template-columns: 10% 15% 50% 15% 10%;
   grid-template-rows: 100px 100vh;
   height: 100%;
 }
@@ -121,6 +121,9 @@ img {
   .grid {
     grid-template-columns: 10% 1fr 768px 1fr 10%;
   }
+  .main {
+    grid-column: 3 / 4;
+  }
 }
 
 /* Half Screen & Tablet */
@@ -129,7 +132,7 @@ img {
     --menu-width: 40vw;
   }
   .grid {
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 10% 80% 10%;
   }
   .main {
     grid-column: 2 / 3;
@@ -140,6 +143,9 @@ img {
 @media only screen and (max-width: 400px) {
   :root {
     --menu-width: 100vw;
+  }
+  .grid {
+    grid-template-columns: 5% 90% 5%;
   }
 }
 
@@ -356,8 +362,8 @@ h1, h2, h3, h4, h5, h6 {
    font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
      "Liberation Mono", Menlo, Courier, monospace;
    padding: 0;
-   padding-top: 0.2em;
-   padding-bottom: 0.2em;
+   padding-top: var(--default-padding);
+   padding-bottom: var(--default-padding);
  }
  pre code {
    background: none;
@@ -382,13 +388,12 @@ h1, h2, h3, h4, h5, h6 {
  }
 
 .gist {
-  max-width: 614px;
+  max-width: 100%;
 }
 
 
 /* todo:
 - tables
-- code pre
 - spacing between headlines
 - jazz up 404 page
 */
