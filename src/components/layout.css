@@ -1,7 +1,8 @@
 /* Reset */
 
 /* CSS Reset */
-html, body, menu, ol, ul, li, button, a, h1, h2, h3, h4, h5, h6 {
+html, body, menu, ol, ul, li, button, a, h1, h2, h3, h4, h5, h6,
+blockquote {
 	box-sizing: border-box;
   border: 0;
   font-family: 'Helvetica', sans-serif;
@@ -251,6 +252,26 @@ p {
   background: var(--purple);
 }
 
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
+th, tr, td {
+  border: 1px solid var(--gray-light);
+  padding: var(--default-padding);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 2px solid var(--gray-light);
+  padding-left: var(--default-padding);
+  font-style: italic;
+  margin-left: calc(3 * var(--default-padding));
+}
+blockquote p {
+  font: inherit;
+}
 
 
 /* Links */
@@ -407,8 +428,3 @@ ul.list--separators-gray li {
   max-width: 100%;
 }
 
-
-/* todo:
-- tables
-- jazz up 404 page
-*/
