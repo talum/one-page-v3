@@ -111,5 +111,5 @@ changes up to GitHub.
 And now, miraculously, everything is working pretty seamlessly. In a matter
 of days, I was able to create and deploy a new static site to Netlify using GatsbyJS,
 and it was awesome. I like to think it's a testament to my skill as a
-developer, and that is probaly true to some extent, but largely it's
+developer, and that is probably true to some extent, but largely it's
 a testament to the power of well-designed dev tools.
