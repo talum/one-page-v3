@@ -240,6 +240,10 @@ p {
   margin-top: 1rem;
 }
 
+.blog ol, ul {
+  margin-top: 1rem;
+}
+
 /* Highlight */
 
 ::moz-selection {
