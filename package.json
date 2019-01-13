@@ -18,9 +18,13 @@
     "gatsby-transformer-sharp": "^2.1.8",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
+    "query-string": "^6.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0"
+  },
+  "resolutions": {
+    "@andrew-codes/gatsby-plugin-elasticlunr-search/graphql": "0.13.2"
   },
   "keywords": [
     "gatsby"
@@ -34,6 +38,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@andrew-codes/gatsby-plugin-elasticlunr-search": "^1.0.4",
     "prettier": "^1.15.2"
   },
   "repository": {
