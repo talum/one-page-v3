@@ -15,13 +15,19 @@ export const query = graphql`
 export default class Search extends Component {
   constructor(props) {
     super(props)
-    this.index = Index.load(props.data.siteSearchIndex.index)
-    this.query = this.parseQueryString(props.location.search)
     this.state = {
-      results: this.index
-        .search(this.query)
-        .map(({ ref }) => this.index.documentStore.getDoc(ref)),
+      query: ``,
+      results: [],
     }
+  }
+
+  componentDidMount() {
+    this.index = this.findOrCreateIndex()
+    const query = this.parseQueryString(this.props.location.search)
+    this.setState({
+      query: query,
+      results: this.search(query),
+    })
   }
 
   parseQueryString(searchParams) {
@@ -29,11 +35,32 @@ export default class Search extends Component {
     return !!query ? query : ''
   }
 
+  findOrCreateIndex() {
+    return this.index
+      ? this.index
+      : Index.load(this.props.data.siteSearchIndex.index)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.index = this.findOrCreateIndex()
+    const query = this.parseQueryString(nextProps.location.search)
+    this.setState({
+      query: query,
+      results: this.search(query),
+    })
+  }
+
+  search(query) {
+    return this.index
+      .search(query)
+      .map(({ ref }) => this.index.documentStore.getDoc(ref))
+  }
+
   render() {
     return (
       <Layout>
         <h1 className="heading heading--level-1 util--text-align-c util--padding-bxxl">
-          Search Results for "{this.query}"
+          Search Results for "{this.state.query}"
         </h1>
         {this.state.results.map((result, i) => (
           <div key={i} className="util--padding-bxl">
