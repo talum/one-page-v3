@@ -376,6 +376,19 @@ ul.list--separators-gray li {
   fill: var(--gray);
 }
 
+/* Input */
+.form-group {
+  border: 1px solid var(--gray-light);
+  border-radius: 4px;
+}
+.form__input {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+}
+.form__button {
+  /* TODO: Style this */
+}
 /* Code */
  pre {
    margin-left: 0;

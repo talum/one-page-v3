@@ -17,13 +17,20 @@ const Header = ({ siteTitle, toggleMenu }) => (
     </div>
     <div className="header__item">
       <form
+        className="form-group"
         name="searchform"
         onSubmit={e => {
           e.preventDefault()
           navigate(`/search/?q=${e.target.firstChild.value}`)
         }}
       >
-        <input name="search" type="text" />
+        <input
+          className="form__input"
+          name="search"
+          placeholder="Search"
+          type="text"
+        />
+        <input type="submit" className="form__button" />
       </form>
     </div>
     <div className="header__item">
