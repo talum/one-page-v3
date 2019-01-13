@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { navigate } from 'gatsby'
 import React from 'react'
+import qs from 'query-string'
 
 const Header = ({ siteTitle, toggleMenu }) => (
   <header className="header">
@@ -21,7 +22,7 @@ const Header = ({ siteTitle, toggleMenu }) => (
         name="searchform"
         onSubmit={e => {
           e.preventDefault()
-          navigate(`/search/?q=${e.target.firstChild.value}`)
+          navigate(`/search/?${qs.stringify({ q: e.target.firstChild.value })}`)
         }}
       >
         <input
