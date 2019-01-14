@@ -364,9 +364,6 @@ ul.list--separators-gray li {
   padding: var(--default-padding);
   position: absolute;
 }
-.svg-container {
-  padding: var(--default-padding);
-}
 .button--color-white {
   color: var(--white);
   fill: var(--white);
@@ -376,18 +373,36 @@ ul.list--separators-gray li {
   fill: var(--gray);
 }
 
+/* Inline SVG */
+.svg-container {
+  --svg--small-size: 8px;
+  position: relative;
+}
+.svg-container svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.svg-container--small {
+  padding: var(--svg--small-size);
+}
+
 /* Input */
 .form-group {
   border: 1px solid var(--gray-light);
   border-radius: 4px;
+  display: flex;
 }
 .form__input {
   border: 0;
-  padding: 8px;
+  padding: var(--default-padding);
   border-radius: 4px;
 }
-.form__button {
-  /* TODO: Style this */
+.form__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: var(--default-padding);
 }
 /* Code */
  pre {
