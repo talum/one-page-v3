@@ -389,21 +389,52 @@ ul.list--separators-gray li {
 
 /* Input */
 .form-group {
-  border: 1px solid var(--gray-light);
-  border-radius: 4px;
   display: flex;
 }
 .form__input {
   border: 0;
-  padding: var(--default-padding);
-  border-radius: 4px;
+  visibility: hidden;
+  width: 0;
 }
 .form__search {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: var(--default-padding);
 }
+.form__search[data-open='false'] + .form__input {
+  animation-name: hide;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+}
+.form__search[data-open='true'] + .form__input {
+  padding-right: var(--default-padding);
+  width: 200px;
+  visibility: visible;
+  padding: calc(var(--default-padding) - 3px);
+  border-bottom: 1px solid var(--gray-light);
+  animation-name: reveal;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes hide {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 /* Code */
  pre {
    margin-left: 0;
