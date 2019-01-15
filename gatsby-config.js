@@ -77,7 +77,8 @@ module.exports = {
         resolvers: {
           MarkdownRemark: {
             title: node => node.frontmatter.title,
-            url: node => node.fields.slug
+            url: node => node.fields.slug,
+            date: node => node.frontmatter.date,
           }
         }
       },
