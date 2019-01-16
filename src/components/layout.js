@@ -11,12 +11,18 @@ class Layout extends React.Component {
     super(props)
     this.state = {
       open: false,
+      searchExpanded: null,
     }
     this.toggleMenu = this.toggleMenu.bind(this)
+    this.toggleSearch = this.toggleSearch.bind(this)
   }
 
   toggleMenu() {
     this.setState({ open: !this.state.open })
+  }
+
+  toggleSearch() {
+    this.setState({ searchExpanded: !this.state.searchExpanded })
   }
 
   render() {
@@ -37,6 +43,8 @@ class Layout extends React.Component {
             <Header
               siteTitle={data.site.siteMetadata.title}
               toggleMenu={this.toggleMenu}
+              toggleSearch={this.toggleSearch}
+              searchExpanded={this.state.searchExpanded}
             />
             <Menu toggleMenu={this.toggleMenu} open={this.state.open} />
             <div

@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
+import { navigate } from 'gatsby'
 import React from 'react'
+import qs from 'query-string'
 
-const Header = ({ siteTitle, toggleMenu }) => (
+const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
   <header className="header">
     <div className="header__item">
       <button
@@ -16,6 +18,40 @@ const Header = ({ siteTitle, toggleMenu }) => (
     </div>
     <div className="header__item">
       <div className="flex-container">
+        <div className="flex__item">
+          <form
+            className="form-group"
+            name="searchform"
+            onSubmit={e => {
+              e.preventDefault()
+              navigate(
+                `/search/?${qs.stringify({ q: e.target.lastChild.value })}`
+              )
+            }}
+          >
+            <div className="form__search" data-open={searchExpanded}>
+              <div
+                className="button button--with-svg button--small button--color-gray"
+                onClick={toggleSearch}
+              >
+                <svg viewBox="0 0 483.083 483.083">
+                  <path
+                    d="M332.74,315.35c30.883-33.433,50.15-78.2,50.15-127.5C382.89,84.433,298.74,0,195.04,0S7.19,84.433,7.19,187.85
+                      S91.34,375.7,195.04,375.7c42.217,0,81.033-13.883,112.483-37.4l139.683,139.683c3.4,3.4,7.65,5.1,11.9,5.1s8.783-1.7,11.9-5.1
+                      c6.517-6.517,6.517-17.283,0-24.083L332.74,315.35z M41.19,187.85C41.19,103.133,110.04,34,195.04,34
+                      c84.717,0,153.85,68.85,153.85,153.85S280.04,341.7,195.04,341.7S41.19,272.567,41.19,187.85z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <input
+              className="form__input"
+              name="search"
+              placeholder="Search"
+              type="text"
+            />
+          </form>
+        </div>
         <div className="flex__item">
           <button className="button button--with-svg button--small button--with-svg-hover button--color-gray">
             <a
@@ -64,7 +100,7 @@ const Header = ({ siteTitle, toggleMenu }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="svg-container" viewBox="0 0 32 32">
+              <svg viewBox="0 0 32 32">
                 <path
                   fill="currentColor"
                   d="M30.7,0H1.3C0.6,0,0,0.6,0,1.3v29.3C0,31.4,0.6,32,1.3,32h29.3c0.7,0,1.3-0.6,1.3-1.3V1.3
@@ -83,7 +119,7 @@ const Header = ({ siteTitle, toggleMenu }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="svg-container" viewBox="0 0 32 32">
+              <svg viewBox="0 0 32 32">
                 <path
                   fill="currentColor"
                   d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3
@@ -104,6 +140,8 @@ const Header = ({ siteTitle, toggleMenu }) => (
 Header.propTypes = {
   siteTitle: PropTypes.string,
   toggleMenu: PropTypes.func.isRequired,
+  toggleSearch: PropTypes.func.isRequired,
+  searchExpanded: PropTypes.bool,
 }
 
 Header.defaultProps = {
