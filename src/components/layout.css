@@ -383,9 +383,6 @@ ul.list--separators-gray li {
   top: 0;
   left: 0;
 }
-.svg-container--small {
-  padding: var(--svg--small-size);
-}
 
 /* Input */
 .form-group {

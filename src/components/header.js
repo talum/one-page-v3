@@ -100,7 +100,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="svg-container" viewBox="0 0 32 32">
+              <svg viewBox="0 0 32 32">
                 <path
                   fill="currentColor"
                   d="M30.7,0H1.3C0.6,0,0,0.6,0,1.3v29.3C0,31.4,0.6,32,1.3,32h29.3c0.7,0,1.3-0.6,1.3-1.3V1.3
@@ -119,7 +119,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="svg-container" viewBox="0 0 32 32">
+              <svg viewBox="0 0 32 32">
                 <path
                   fill="currentColor"
                   d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3
