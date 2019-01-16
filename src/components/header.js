@@ -141,7 +141,7 @@ Header.propTypes = {
   siteTitle: PropTypes.string,
   toggleMenu: PropTypes.func.isRequired,
   toggleSearch: PropTypes.func.isRequired,
-  searchExpanded: PropTypes.bool.isRequired,
+  searchExpanded: PropTypes.bool,
 }
 
 Header.defaultProps = {

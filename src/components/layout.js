@@ -11,7 +11,7 @@ class Layout extends React.Component {
     super(props)
     this.state = {
       open: false,
-      searchExpanded: false,
+      searchExpanded: null,
     }
     this.toggleMenu = this.toggleMenu.bind(this)
     this.toggleSearch = this.toggleSearch.bind(this)
