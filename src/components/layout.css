@@ -391,7 +391,6 @@ ul li {
 .button--color-contrast {
   color: var(--contrast-color);
   fill: var(--contrast-color);
->>>>>>> wip dark theme
 }
 .button--color-secondary {
   color: var(--secondary);
