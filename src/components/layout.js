@@ -12,9 +12,15 @@ class Layout extends React.Component {
     this.state = {
       open: false,
       searchExpanded: null,
+      darkMode: false,
     }
     this.toggleMenu = this.toggleMenu.bind(this)
     this.toggleSearch = this.toggleSearch.bind(this)
+    this.toggleDarkMode = this.toggleDarkMode.bind(this)
+  }
+
+  componentDidMount() {
+    this.setDarkMode()
   }
 
   toggleMenu() {
@@ -23,6 +29,24 @@ class Layout extends React.Component {
 
   toggleSearch() {
     this.setState({ searchExpanded: !this.state.searchExpanded })
+  }
+
+  setDarkMode() {
+    if (window.localStorage.darkMode === 'true') {
+      this.setState({ darkMode: true })
+    } else {
+      this.setState({ darkMode: false })
+    }
+  }
+
+  toggleDarkMode() {
+    if (this.state.darkMode) {
+      window.localStorage.setItem('darkMode', false)
+      this.setState({ darkMode: !this.state.darkMode })
+    } else {
+      window.localStorage.setItem('darkMode', true)
+      this.setState({ darkMode: !this.state.darkMode })
+    }
   }
 
   render() {
@@ -46,7 +70,11 @@ class Layout extends React.Component {
               toggleSearch={this.toggleSearch}
               searchExpanded={this.state.searchExpanded}
             />
-            <Menu toggleMenu={this.toggleMenu} open={this.state.open} />
+            <Menu
+              toggleMenu={this.toggleMenu}
+              open={this.state.open}
+              toggleDarkMode={this.toggleDarkMode}
+            />
             <div
               id="js--site-overlay"
               className="site-overlay"
@@ -54,7 +82,13 @@ class Layout extends React.Component {
               onClick={this.toggleMenu}
             />
             <section className="grid">
-              <main className="main">{children}</main>
+              <main className="main">
+                {React.Children.map(children, child => {
+                  return React.cloneElement(child, {
+                    darkMode: this.state.darkMode,
+                  })
+                })}
+              </main>
             </section>
           </>
         )}

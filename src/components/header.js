@@ -8,7 +8,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
     <div className="header__item">
       <button
         id="js--menu-link"
-        className="button button--with-svg button--small button--color-gray"
+        className="button button--with-svg button--small button--color-header"
         onClick={toggleMenu}
       >
         <svg className="svg-container" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
           >
             <div className="form__search" data-open={searchExpanded}>
               <div
-                className="button button--with-svg button--small button--color-gray"
+                className="button button--with-svg button--small button--color-header"
                 onClick={toggleSearch}
               >
                 <svg viewBox="0 0 483.083 483.083">
@@ -53,7 +53,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
           </form>
         </div>
         <div className="flex__item">
-          <button className="button button--with-svg button--small button--with-svg-hover button--color-gray">
+          <button className="button button--with-svg button--small button--with-svg-hover button--color-header">
             <a
               href="https://github.com/talum"
               target="_new"
@@ -73,7 +73,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
         </div>
         <div className="flex__item">
           <button
-            className="button button--with-svg button--small button--with-svg-hover"
+            className="button button--with-svg button--small button--with-svg-hover button--color-header"
             rel="noopener noreferrer"
           >
             <a
@@ -94,7 +94,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
           </button>
         </div>
         <div className="flex__item">
-          <button className="button button--with-svg button--small button--with-svg-hover button--color-gray">
+          <button className="button button--with-svg button--small button--with-svg-hover button--color-header">
             <a
               href="https://www.linkedin.com/in/tracylum/"
               target="_blank"
@@ -113,7 +113,7 @@ const Header = ({ siteTitle, toggleMenu, toggleSearch, searchExpanded }) => (
           </button>
         </div>
         <div className="flex__item">
-          <button className="button button--with-svg button--small button--with-svg-hover button--color-gray">
+          <button className="button button--with-svg button--small button--with-svg-hover button--color-header">
             <a
               href="https://twitter.com/Tracidini"
               target="_blank"
