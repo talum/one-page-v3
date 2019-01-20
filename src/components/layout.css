@@ -140,6 +140,9 @@ body {
   transition: left 0.2s ease;
   width: var(--menu-width);
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .menu[data-open='true'] {
   left: 0;
@@ -156,6 +159,9 @@ body {
   transition: all 0.2s ease-out;
   width: 90%;
 }
+.menu__item--offset {
+  align-items: flex-end;
+}
 .menu__item:hover {
   background-color: var(--menu-color);
   filter: brightness(150%);
@@ -163,6 +169,8 @@ body {
 }
 .menu__close {
   padding: var(--default-padding) 0 0 calc(2 * var(--default-padding));
+}
+.menu__footer {
 }
 
 /* Header */
