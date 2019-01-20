@@ -29,32 +29,80 @@ img {
   --lavender: #8D86C9;
   --white: #FFFFFF;
   --purple: #725AC1;
+
   /* spacing */
   --default-padding: 12px;
   --menu-width: 20vw;
+
   /* default color scheme */
+
+  /* confetti */
   --primary: var(--purple);
   --primary-dark: var(--purple-dark);
   --primary-light: var(--lavender);
   --secondary: var(--gray);
   --secondary-light: var(--gray-light);
+
+  /* menu */
+  --menu-color: var(--purple-dark);
+
+  /* header */
+  --header-border-color: var(--gray-light);
+
+  /* font color */
+  --contrast-font-color: var(--white);
+  --link-color: var(--purple);
+  --link-hover-color: var(--lavender);
+  --highlight-bg-color: var(--purple);
+
+  /* global settings */
   --contrast-color: var(--white);
   --background-color: var(--white);
-  /* global settings */
   color: var(--gray);
   font-size: 16px;
+
+  /* buttons */
+  --button--color-menu: var(--gray-light);
+  --button--color-header: var(--gray);
+  --button--color-header-hover: var(--gray-light);
+
+  /* table */
+  --table-border-color: var(--gray-light);
+
+  /* input */
+  --input-border-color: var(--gray-light);
 }
 
 /* dark theme */
 .dark {
-  --primary: var(--lavender);
-  --primary-dark: var(--purple);
-  --primary-light: var(--gray-light);
-  --secondary: var(--purple);
-  --secondary-light: var(--lavender);
-  --contrast-color: var(--white);
+  /* menu */
+  --menu-color: var(--lavender);
+
+  /* header */
+  --header-border-color: var(--gray-light);
+
+  /* font color */
+  --contrast-font-color: var(--purple-light);
+  --link-color: var(--lavender);
+  --link-hover-color: var(--lavender);
+  --highlight-bg-color: var(--white);
+
+  /* global settings */
+  --contrast-color: var(--purple-light);
   --background-color: var(--gray);
   color: var(--white);
+  font-size: 16px;
+
+  /* buttons */
+  --button--color-menu: var(--gray-light);
+  --button--color-header: var(--gray-light);
+  --button--color-header-hover: var(--lavender);
+
+  /* table */
+  --table-border-color: var(--gray-light);
+
+  /* input */
+  --input-border-color: var(--gray-light);
 }
 
 body {
@@ -79,8 +127,8 @@ body {
 
 /* Menu */
 .menu {
-  background-color: var(--primary-dark);
-  color: var(--contrast-color);
+  background-color: var(--menu-color);
+  color: var(--contrast-font-color);
   font-size: 0.9rem;
   font-weight: 300;
   height: 100vh;
@@ -109,7 +157,7 @@ body {
   width: 90%;
 }
 .menu__item:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--menu-color);
   filter: brightness(150%);
   opacity: 0.9;
 }
@@ -122,7 +170,7 @@ body {
   --header-height: 50px;
   align-items: center;
   background-color: var(--background-color);
-  border-bottom: 1px solid var(--secondary-light);
+  border-bottom: 1px solid var(--header-border-color);
   display: flex;
   height: var(--header-height);
   justify-content: space-between;
@@ -277,12 +325,12 @@ p {
 
 ::moz-selection {
   color: var(--contrast-color);
-  background: var(--primary);
+  background: var(--highlight-bg-color);
 }
 
 ::selection {
   color: var(--contrast-color);
-  background: var(--primary);
+  background: var(--highlight-bg-color);
 }
 
 /* Tables */
@@ -291,13 +339,13 @@ table {
   border-style: hidden;
 }
 th, tr, td {
-  border: 1px solid var(--secondary-light);
+  border: 1px solid var(--table-border-color);
   padding: var(--default-padding);
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 2px solid var(--secondary-light);
+  border-left: 2px solid var(--table-border-color);
   padding-left: var(--default-padding);
   font-style: italic;
   margin-left: calc(3 * var(--default-padding));
@@ -309,16 +357,16 @@ blockquote p {
 
 /* Links */
 a {
-  color: var(--primary);
+  color: var(--link-color);
   font-family: inherit;
 }
 a:hover {
-  color: var(--primary-light);
+  color: var(--link-hover-color);
   padding-bottom: 2px;
-  border-bottom: 1px solid var(--primary-light);
+  border-bottom: 1px solid var(--link-hover-color);
 }
 a.link--color-contrast {
-  color: var(--contrast-color);
+  color: var(--contrast-font-color);
 }
 a.link--color-contrast:hover {
   padding: 0;
@@ -380,7 +428,7 @@ ul li {
   position: relative;
 }
 .button--with-svg-hover:hover {
-  background-color: var(--secondary-light);
+  background-color: var(--button--color-header-hover);
   border-radius: 2px;
   transition: all 1s ease;
 }
@@ -388,13 +436,13 @@ ul li {
   padding: var(--default-padding);
   position: absolute;
 }
-.button--color-contrast {
-  color: var(--contrast-color);
-  fill: var(--contrast-color);
+.button--color-menu {
+  color: var(--button--color-menu);
+  fill: var(--button--color-menu);
 }
-.button--color-secondary {
-  color: var(--secondary);
-  fill: var(--secondary);
+.button--color-header {
+  color: var(--button--color-header);
+  fill: var(--button--color-header);
 }
 .svg-container {
   padding: var(--default-padding);
@@ -435,7 +483,7 @@ ul li {
   width: 200px;
   visibility: visible;
   padding: calc(var(--default-padding) - 3px);
-  border-bottom: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--input-border-color);
   animation-name: reveal;
   animation-duration: 0.25s;
   animation-timing-function: ease-in-out;
