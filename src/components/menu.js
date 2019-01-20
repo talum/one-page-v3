@@ -29,7 +29,7 @@ const Menu = ({ toggleMenu, toggleDarkMode, open }) => (
     </div>
     <div className="menu__footer">
       <div className="menu__item" onClick={toggleDarkMode}>
-        toggle dark mode
+        <span style={{ cursor: 'pointer' }}>toggle dark mode</span>
       </div>
     </div>
   </menu>

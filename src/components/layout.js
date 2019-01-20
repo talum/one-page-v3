@@ -19,6 +19,10 @@ class Layout extends React.Component {
     this.toggleDarkMode = this.toggleDarkMode.bind(this)
   }
 
+  componentDidMount() {
+    this.setDarkMode()
+  }
+
   toggleMenu() {
     this.setState({ open: !this.state.open })
   }
@@ -27,8 +31,22 @@ class Layout extends React.Component {
     this.setState({ searchExpanded: !this.state.searchExpanded })
   }
 
+  setDarkMode() {
+    if (window.localStorage.darkMode === 'true') {
+      this.setState({ darkMode: true })
+    } else {
+      this.setState({ darkMode: false })
+    }
+  }
+
   toggleDarkMode() {
-    this.setState({ darkMode: !this.state.darkMode })
+    if (this.state.darkMode) {
+      window.localStorage.setItem('darkMode', false)
+      this.setState({ darkMode: !this.state.darkMode })
+    } else {
+      window.localStorage.setItem('darkMode', true)
+      this.setState({ darkMode: !this.state.darkMode })
+    }
   }
 
   render() {
@@ -45,10 +63,7 @@ class Layout extends React.Component {
           }
         `}
         render={data => (
-          <div
-            className={this.state.darkMode ? `dark` : ''}
-            style={{ height: '100vh' }}
-          >
+          <>
             <Header
               siteTitle={data.site.siteMetadata.title}
               toggleMenu={this.toggleMenu}
@@ -67,9 +82,15 @@ class Layout extends React.Component {
               onClick={this.toggleMenu}
             />
             <section className="grid">
-              <main className="main">{children}</main>
+              <main className="main">
+                {React.Children.map(children, child => {
+                  return React.cloneElement(child, {
+                    darkMode: this.state.darkMode,
+                  })
+                })}
+              </main>
             </section>
-          </div>
+          </>
         )}
       />
     )
