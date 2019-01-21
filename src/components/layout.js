@@ -34,8 +34,10 @@ class Layout extends React.Component {
   setDarkMode() {
     if (window.localStorage.darkMode === 'true') {
       this.setState({ darkMode: true })
+      document.querySelector('body').classList.add('dark')
     } else {
       this.setState({ darkMode: false })
+      document.querySelector('body').classList.remove('dark')
     }
   }
 
@@ -43,9 +45,11 @@ class Layout extends React.Component {
     if (this.state.darkMode) {
       window.localStorage.setItem('darkMode', false)
       this.setState({ darkMode: !this.state.darkMode })
+      document.querySelector('body').classList.remove('dark')
     } else {
       window.localStorage.setItem('darkMode', true)
       this.setState({ darkMode: !this.state.darkMode })
+      document.querySelector('body').classList.add('dark')
     }
   }
 
@@ -82,13 +86,7 @@ class Layout extends React.Component {
               onClick={this.toggleMenu}
             />
             <section className="grid">
-              <main className="main">
-                {React.Children.map(children, child => {
-                  return React.cloneElement(child, {
-                    darkMode: this.state.darkMode,
-                  })
-                })}
-              </main>
+              <main className="main">{children}</main>
             </section>
           </>
         )}

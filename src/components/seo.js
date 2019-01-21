@@ -6,7 +6,7 @@ import favicon32 from '../images/favicon32x32.png'
 
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title, darkMode }) {
+function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -15,7 +15,6 @@ function SEO({ description, lang, meta, keywords, title, darkMode }) {
           description || data.site.siteMetadata.description
         return (
           <Helmet
-            bodyAttributes={{ class: darkMode ? `dark` : '' }}
             htmlAttributes={{
               lang,
             }}
@@ -102,7 +101,6 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
-  darkMode: PropTypes.bool,
 }
 
 export default SEO
