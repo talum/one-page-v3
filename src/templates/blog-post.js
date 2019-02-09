@@ -9,7 +9,9 @@ export default ({ data }) => {
     <Layout>
       <div className="blog">
         <SEO title={post.frontmatter.title} />
-        <h1 className="heading heading--level-1">{post.frontmatter.title}</h1>
+        <h1 className="heading heading--level-1 util--padding-bxl">
+          {post.frontmatter.title}
+        </h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div className="util--padding-tl">
           <Link to="/blog" className="heading heading--level-4">
