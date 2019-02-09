@@ -7,7 +7,7 @@ a, h1, h2, h3, h4, h5, h6,
 blockquote {
 	box-sizing: border-box;
   border: 0;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Merriweather', sans-serif;
   font-weight: 400;
   list-style: none;
   margin: 0;
@@ -265,8 +265,7 @@ body {
 
 /* Typography */
 .heading {
-  font-family: 'Catamaran', sans-serif;
-  font-weight: 600;
+  font-family: 'Merriweather', sans-serif;
 }
 .heading a:hover {
   /* no underline for headline links */
@@ -277,6 +276,8 @@ body {
   font-size: 3rem;
   line-height: 3.4rem;
   letter-spacing: -0.12rem;
+  font-weight: 900;
+  font-style: italic;
 }
 .heading--level-2 {
   font-size: 2.25rem;
@@ -312,7 +313,6 @@ body {
 
 /* Body */
 p {
-  margin: 1.5rem 0;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -409,6 +409,17 @@ ul li {
 }
 .module--padding-small {
   padding: calc(var(--default-padding) / 2);
+}
+
+/* Module Newsy */
+.module--newsy {
+  margin-bottom: calc(var(--default-padding) * 2);
+}
+.module--newsy .module__head {
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: calc(var(--default-padding) / 2);
+}
+.module--newsy .module__body {
 }
 
 /* Flex Container */

@@ -85,11 +85,17 @@ const Projects = () => (
       Projects
     </h1>
     {projectsList.map((project, i) => (
-      <div key={i} className="util--padding-bxl">
-        <h2 className="heading heading--level-3">{project.title}</h2>
-        <h3 className="heading heading--level-4">{project.tech}</h3>
-        <h3 className="heading heading--level-4">{project.integrations}</h3>
-        <p>{project.description}</p>
+      <div key={i} className="module module--newsy util--padding-bxl">
+        <div className="module__head">
+          <h2 className="heading heading--level-3 util--padding-bm">
+            {project.title}
+          </h2>
+        </div>
+        <div className="module__body">
+          <h3 className="heading heading--level-4">{project.tech}</h3>
+          <h3 className="heading heading--level-4">{project.integrations}</h3>
+          <p>{project.description}</p>
+        </div>
       </div>
     ))}
   </Layout>
