@@ -15,7 +15,7 @@ migrations in several PRs to get it correct.
 With that in mind, I'm putting this
 post together to remind myself (and maybe you, dear reader) of some points
 to consider before pushing your migrations to prod. By the way, this post
-assumes that you self-manage a Postgresql Relational Database because that's
+assumes that you self-manage a Postgresql database because that's
 what I work with.
 
 ## 1. Sketch the domain.
