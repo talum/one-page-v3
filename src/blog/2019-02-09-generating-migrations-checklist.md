@@ -63,7 +63,7 @@ end
 The [references](https://hexdocs.pm/ecto_sql/Ecto.Migration.html#references/2) function allows you to generate the foreign key constraint.
 Also note that I'm adding a `NOT NULL` constraint here by specifying `null: false`.
 
-## 4. Not nulls
+## 4. What about nulls?
 
 Which brings me to the next point: which columns absolutely cannot be `null`? You should add a `NOT NULL` constraint. Most columns probably shouldn't have `null` values.
 
