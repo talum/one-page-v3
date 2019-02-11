@@ -7,14 +7,14 @@ categories: ["migrations", "schema"]
 ---
 
 Maybe it's a little presumptuous to call this the "ultimate" checklist, but
-I've noticed that in my own work, I tend to overlook the same things over and over when
+I've noticed that in my own work I tend to overlook the same things over and over when
 creating migrations, regardless of the complexity of the codebase, stack, or
-domain. No doubt I'll get it right *eventually*, but it often takes a few
+domain. I'll get it right *eventually*, but it often takes a few
 migrations in several PRs to get it correct.
 
 With that in mind, I'm putting this
-post together to remind myself (and maybe you, dear reader) of some points
-to consider before pushing your migrations to prod. By the way, this post
+post together to remind myself of some points
+to consider before pushing migrations to prod. By the way, this post
 assumes that you self-manage a Postgresql database because that's
 what I work with.
 
@@ -26,13 +26,56 @@ anyone on that team should be able to update the document. The ability to
 embed a linked Google Drawing in a Google Doc in which you share other technical
 specifications is also a pro.
 
-Sketch the tables and their columns and field types.
+Sketch the tables and their columns and field types. Note where the foreign
+keys live.
 
-## 2. Add timestamps.
+## 2. Add foreign key constraints.
+
+In most cases, you want to guarantee referential integrity, right? If you
+have one table that references another, you probably want to make sure that
+a record cannot be inserted unless the referenced foreign key is present in the related
+table.
+
+For example, if you have a `cohort` that belongs to a `course_offering`, you
+most likely want to make sure that the `course_offering` exists when you try
+to insert the `cohort`.
+
+You can accomplish this by using [foreign key
+constraints](https://www.postgresql.org/docs/9.6/tutorial-fk.html).
+
+Here's a code example in Elixir using Ecto:
+
+```elixir
+
+defmodule Registrar.Repo.Migrations.CreateCohortsTable do
+  use Ecto.Migration
+
+  def change do
+    create table(:cohorts) do
+      add :course_offering_id, references(:course_offerings), null: false
+
+      timestamps()
+    end
+  end
+end
+```
+
+The [references](https://hexdocs.pm/ecto_sql/Ecto.Migration.html#references/2) function allows you to generate the foreign key constraint.
+Also note that I'm adding a `NOT NULL` constraint here by specifying `null: false`.
+
+## 4. Not nulls
+
+Which brings me to the next point: which columns absolutely cannot be `null`? You should add a `NOT NULL` constraint. Most columns probably shouldn't have `null` values.
+
+## 5. Are there any default values?
+
+If the column can't be `null`, is there a [default value](https://www.postgresql.org/docs/9.3/ddl-default.html) you can assign?
+
+## 6. Add timestamps.
 
 You can almost never go wrong with timestamps for `inserted_at` and `updated_at`. So make sure you add them.
 
-## 3. Verify uniqueness.
+## 7. Verify uniqueness.
 
 Requiring uniqueness leads to a host of other questions.
 
@@ -107,7 +150,9 @@ end
 ```
 After that, you can start using the field type in your migrations.
 
-## 4. Do your records need to communicate with external services? Use UUIDs.
+Note: Also, when you're accepting user input, you should be sure to strip the input of leading and trailing whitespace.
+
+## 8. Do your records need to communicate with external services? Use UUIDs.
 
 If your records need to communicate with external services, you should consider creating a different type of identifier for it that can be synced across the services. You would probably not want to send a primary key anywhere else because it's pretty useless, non-unique, and uninformative. Instead, use a UUID, or a "universally unique identifier". That's not something you generate by yourself in code (I've been there before, not what it is.) In Postgresql, it's a whole other [data type](https://www.postgresql.org/docs/9.1/datatype-uuid.html). You can enable it with the [`uuid-ossp` module](https://www.postgresql.org/docs/9.5/uuid-ossp.html) and you'll have to do so before using it for the first time.
 
@@ -129,10 +174,10 @@ By providing the default value for the `cohort_uuid` field with field type `uuid
 
 More on [UUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) on Wikipedia.
 
-## 5. Add other indexes for faster lookup.
+## 9. Add other indexes for faster lookup.
 Depending on the anticipated size of your table and how often you plan on querying it, you could benefit from creating indexes on the fields you're searching by. Remember that adding indexes will slow down writes, but provide faster reads. You can indeed [index on dates](https://devcenter.heroku.com/articles/postgresql-indexes) by the way. Read more [here](https://www.postgresql.org/docs/9.1/sql-createindex.html).
 
-## 6. Dropping tables and columns.
+## 10. Dropping tables and columns.
 Dropping tables or columns on active tables can be pretty tricky. In general, the best practice is to first remove all the code references to it, and then follow up with a migration to drop the tables. This has bitten my team multiple times because of our particular deployment scheme in which our staging and production environments for our monolith share the same database. So the migrations get run on the staging box before the accompanying code makes it to production, which causes a 500 on prod pretty much everywhere. So, as tempting as it is to remove code and tables in one fell swoop, don't do it.
 
 You might want to ask your ops team to generate a backup just in case something terrible goes wrong. But in my experience so far, if you're dropping tables, you probably just don't need it so take the Kondo approach and say "thank you" and discard it.
@@ -147,3 +192,5 @@ You might want to ask your ops team to generate a backup just in case something 
 - [Heroku on Postgresql Indexes](https://devcenter.heroku.com/articles/postgresql-indexes)
 - [Create Index](https://www.postgresql.org/docs/9.1/sql-createindex.html)
 - [Rails allow_nil](https://guides.rubyonrails.org/active_record_validations.html#allow-nil)
+- [Foreign key constraints](https://www.postgresql.org/docs/9.6/tutorial-fk.html)
+- [Ecto References](https://hexdocs.pm/ecto_sql/Ecto.Migration.html#references/2)
