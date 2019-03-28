@@ -80,7 +80,7 @@ I've been thinking a lot about this part...in a web application, I think of the 
 
 In the Rails app I've been working on for the past few years, the business logic has gotten out of control in many of our controllers, which makes the operations they perform less reusable, so I can definitely see the benefit of layers.
 
-## 7. Use services when domain concepts aren't naturally modeled as objects.
+## 8. Use services when domain concepts aren't naturally modeled as objects.
 
 > Now, the more common mistake is to give up too easily on fitting the behavior into an appropriate object, gradually slipping toward procedural programming. But when we force an operation into an object that doesn't fit the object's definition, the object loses its conceptual clarity and becomes hard to understand or refactor. Complex operations can easily swamp a simple object, obscuring its role. And because these operations often draw together many domain objects, coordinating them and putting them into action, the added responsibility will create dependencies on all those objects, tangling concepts that could be understood independently.
 
@@ -88,7 +88,7 @@ In the Rails app I've been working on for the past few years, the business logic
 
 To me, this sounds like we should use services when many objects need to interact. Also, name the service after the activity or operation instead of a noun. "DeployRepo" vs "DeployRepoManager". It has a clearer responsibility this way. 
 
-## 8. Use aggregates, factories, and repositories.
+## 9. Use aggregates, factories, and repositories.
 
 Associations are hard to manage so seek to minimize them where possible. The aggregate, factory, and repository pattern can help you manage complex objects and their associations.
 
@@ -102,25 +102,25 @@ Where factories become useful is for constructing these complex objects. Sometim
 
 Since I work usually with web frameworks like Rails and Phoenix, I haven't had too much of a use case for the repository pattern, but I suppose it could be used for controlling the ability to query objects and persist them. Another potential use case is to prevent reaching directly into objects to query for them. Instead, you'd be forced to go through the aggregate root. In Phoenix, you could configure your repository to be an in-memory store rather than a database-backed one, so maybe that's another possible use case.
 
-## 9. Use specifications for business rules when appropriate, so they can live in the domain. 
+## 10. Use specifications for business rules when appropriate, so they can live in the domain. 
 
 Sometimes you have to define rules to validate, select, or create objects. The specification pattern, which uses the idea of objects used as predicates can help. Define a bunch of objects that conform to the same interface and then combine them. These objects can have multiple methods that apply for each scenario: validation, selection, or creation.
 
-## 10. Go for simple.
+## 11. Go for simple.
 
 > A lot of overengineering has been justified in the name of flexibility. But more often than not, excessive layers of abstraction and indirection get in the way. Look at the design of software that really empowers the people who handle it; you will usually see something simple. Simple is not easy.
 
 You want a supple, intention-revealing design, one that is simple can able to change. In order to change something (well), you need to understand it, which is why simplicity and clarity are so important.
 
-## 11. Aim for consistency within bounded contexts. 
+## 12. Aim for consistency within bounded contexts. 
 
 Draw an explicitly boundary so you can keep the model pure inside. When codebases and teams get too big, you will probably struggle to keep everything consistent everywhere, and that's okay. Just demarcate parts of the app.
 
-## 12. Anticorruption layers can help keep the model pure.
+## 13. Anticorruption layers can help keep the model pure.
 
 An anti-corruption layer is a layer of translation between two models, maybe even two bounded contexts. It can translate in both directions.
 
-## 13. But external systems can be annoying. 
+## 14. But external systems can be annoying. 
 
 I'm conflicted on how to best work with external systems. For Salesforce in particular, we face an interesting challenge because Salesforce can be customized to our administrators' content, which means that workflows and communications are in constant flux. Evans suggests that there are two solutions: conforming or anti-corruption. 
 
@@ -128,13 +128,13 @@ I'm conflicted on how to best work with external systems. For Salesforce in part
 
 I'm struggling to figure out if Salesforce should be part of our domain or whether it maps to something that already exists. Ongoing battle.
 
-## 14. Work together.
+#15. Work together.
 
 > A good project has lots of people sticking their nose in other people's business. Developers play with frameworks. Architects write application code. Everyone talks to everyone. It is efficiently chaotic. Make the objects into specialists; let the developers be generalists.
 
 Pretty much everyone has to work together to make everything work. It doesn't make sense to have architects not code or analysts create a model without talking to anyone. Evans talks a lot about not siphoning off the best and brightest to do architecture or infrastructure. Good design requires feedback and iteration. 
 
-## 15. And finally, some quotes I just really liked and wanted to highlight.
+## 16. And finally, some quotes I just really liked and wanted to highlight.
 
 > Whatever the system, be less concerned with the authority bestowed by management than with the actual relationship the developers have with the strategy.
 
