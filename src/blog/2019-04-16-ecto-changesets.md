@@ -8,7 +8,10 @@ categories: ["elixir", "ecto"]
 
 _or, be the changeset you want to see in the world_
 
-## What are changesets and why do you need them?
+This post explains how `Ecto.Changeset` can help you make safer changes to
+your data by providing different types of validations per update scenario.
+
+## A troublesome update scenario
 
 Imagine you're building an application that does a lot of complex things. I
 mean, what application doesn't these days, but let's for instance say you're
@@ -119,15 +122,20 @@ like this is possible.
 
 This is where the beauty of `Ecto.Changeset` comes in.
 
-## Why Ecto.Changeset?
+## Why `Ecto.Changeset`?
 
 First, a couple points of clarification:
 - `Ecto` is a database library for Elixir. It's not the only one, but it's a
   nice one.
-- Ecto is two separate packages: `ecto` and `ecto_sql` so you can get the
+- `Ecto` is two separate packages: `ecto` and `ecto_sql` so you can get the
   data manipulation features without using a relational database.
-- You can use Ecto without Phoenix. However, it works really nicely with
+- You can use `Ecto` without Phoenix if you're building a basic Elixir app. However, it works really nicely with
   Phoenix, so hooray.
+
+And now, onto the `Ecto.Changeset`, which is one module that's part of the
+`Ecto` library. What's a changeset? Well, it's a data structure with some
+helper functions that helps you manipulate, cast, filter, validate, and
+otherwise transform your data into the format you expect.
 
 
 
