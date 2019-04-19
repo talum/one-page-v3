@@ -159,6 +159,7 @@ update, but that's a whole other thing.
 # Look, I can close a paid invoice willy-nilly!
 > invoice = Invoice.find(1)
 > ### insert ex
+=> #<Invoice id: 1, amount_due: 10000, due_date: "2019-04-17 18:29:47", scheduled_send_date: "2019-04-17 18:29:47", closed_at: nil>
 > invoice.update(closed_at: Time.current)
 ```
 
@@ -227,9 +228,16 @@ discarded.
 ```elixir
 > attributes = %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25",
 > closed_at: "2019-05-01"}
-> Registrar.Billing.Invoice.changeset(%Invoice{}, attributes)
-> ## changeset
+> changeset = Registrar.Billing.Invoice.changeset(%Invoice{}, attributes)
+> #Ecto.Changeset<
+  action: nil,
+  changes: %{amount_due: 15000},
+  errors: [],
+  data: #Registrar.Billing.Invoice<>,
+  valid?: true
+>
 > ## changeset.changes
+> %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25"}
 ```
 
 The extra attribute `closed_at` disappears and is not included in the set of changes. So no
@@ -370,7 +378,7 @@ defmodule Registrar.Billing do
 end
 ```
 
-If you wanted to look at the set of changes, you could get a reference to the changeset and call `.changes` on it, which would list out all the changes about to be made. Also, if you wanted to check validity, simply call `.valid?` on the changeset.
+If you wanted to look at the set of changes, you could get a reference to the changeset and call `.changes` on it, which would list out all the changes about to be made. Also, if you wanted to check validity, simply call `.valid?` on the changeset. And `.errors` will give you a list of any errors.
 
 ## What about constraints, though?
 Great question.
