@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Use Ecto Changesets"
+title: "How to Use Ecto.Changeset"
 date: 2019-04-16T09:57:16-05:00
 comments: true
 categories: ["elixir", "ecto"]
@@ -156,11 +156,11 @@ You could also do even more damage from a Rails console
 update, but that's a whole other thing.
 
 ```ruby
-# Look, I can close a paid invoice willy-nilly!
-> invoice = Invoice.find(1)
-> ### insert ex
-=> #<Invoice id: 1, amount_due: 10000, due_date: "2019-04-17 18:29:47", scheduled_send_date: "2019-04-17 18:29:47", closed_at: nil>
-> invoice.update(closed_at: Time.current)
+# Look, I can close a paid invoice
+=> invoice = Invoice.find(1)
+=> #<Invoice id: 1, amount_due: 10000, due_date: "2019-04-30 11:18:22", scheduled_send_date: "2019-04-24 18:29:47", closed_at: nil>
+=> invoice.update(closed_at: Time.current)
+=> #<Invoice id: 1, amount_due: 10000, due_date: "2019-04-30 11:18:22", scheduled_send_date: "2019-04-24 18:29:47", closed_at: "2019-04-17 13:09:12">
 ```
 
 All it takes is a few lines of code to create a lot of surface area for
@@ -226,18 +226,18 @@ attributes are passed to this changeset, the changes are filtered out and
 discarded.
 
 ```elixir
-> attributes = %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25",
-> closed_at: "2019-05-01"}
-> changeset = Registrar.Billing.Invoice.changeset(%Invoice{}, attributes)
-> #Ecto.Changeset<
+iex> attributes = %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25",
+iex> closed_at: "2019-05-01"}
+iex> changeset = Registrar.Billing.Invoice.changeset(%Invoice{}, attributes)
+iex> #Ecto.Changeset<
   action: nil,
   changes: %{amount_due: 15000},
   errors: [],
   data: #Registrar.Billing.Invoice<>,
   valid?: true
 >
-> ## changeset.changes
-> %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25"}
+iex> changeset.changes
+iex> %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25"}
 ```
 
 The extra attribute `closed_at` disappears and is not included in the set of changes. So no
@@ -250,7 +250,6 @@ kinds of updates as well.
 
 ```elixir
 defmodule Registrar.Billing.Invoice do
-  # assume that we have an Ecto.Schema defined with all the fields this module needs to know about
   import Ecto.Changeset
 
 	def mark_paid_changeset(%Invoice{} = invoice, attrs \\ %{}) do
@@ -276,7 +275,6 @@ enforce this rule.
 
 ```elixir
 defmodule Registrar.Billing.Invoice do
-  # assume that we have an Ecto.Schema defined with all the fields this module needs to know about
   import Ecto.Changeset
 
 	def mark_closed_changeset(%Invoice{} = invoice, attrs \\ %{}) do
@@ -296,7 +294,7 @@ The entire act of creating or updating a record is encapsulated nicely
 within the changeset. Validations are explicitly applied in specific
 situations. Attributes are cast and filtered all as part of the same
 pipeline, instead of splitting the responsibility between a model and a
-controller. Thanks to Ecto.Changeset, we have a saner way of thinking about
+controller. Thanks to `Ecto.Changeset`, we have a saner way of thinking about
 updates to our records.
 
 ## Cool, and what else can changesets do?
@@ -358,7 +356,7 @@ defmodule Registrar.Billing.Invoice do
 end
 ```
 
-With all of these changesets, the final thing you need to do to commit the change, is get the `Repo` involved.
+With all of these changesets, the final thing you need to do to commit the change is get the `Repo` involved.
 
 Inserting or updating the record like this would do the trick:
 ```elixir
@@ -384,11 +382,86 @@ If you wanted to look at the set of changes, you could get a reference to the ch
 Great question.
 
 So, all of the validations will get run before the database
-even gets involved. But constraints will halt execution at the first failed
-constraint.
+even gets involved, and if any validations failed, constraints will not be
+checked. Constraints will halt execution at the first failed
+constraint and they depend on the database.
 
-# more stuff on constraints
+Constraints are typically used in conjunction with database indexes.
 
+For example, you might use a constraint to check for uniqueness, or to
+confirm that a foreign key exists in another table.
+
+To check uniqueness, you would add a `unique_index` to your table and then
+define a constraint as part of a changeset.
+
+In the example of `invoices`, let's say that an invoice must have a unique
+email address.
+
+```elixir
+defmodule Registrar.Repo.Migrations.ChangeAdmissionsTable do
+  use Ecto.Migration
+
+  def change do
+    create unique_index(:invoices, :email)
+  end
+end
+```
+
+Then, we define a constraint in the changeset to gracefully handle the error thrown by the
+database constraint. This will convert the database constraint violation
+into a friendlier error handled by the changeset and returned.
+
+```elixir
+defmodule Registrar.Billing.Invoice do
+  import Ecto.Changeset
+
+	def changeset(%Invoice{} = invoice, attrs \\ %{}) do
+    invoice
+    |> cast(attrs, [
+      :amount_due,
+      :due_date,
+      :scheduled_send_date,
+      :email
+      ])
+    |> validate_required([
+      :amount_due,
+      :due_date,
+      :scheduled_send_date,
+      :email
+    ])
+    |> validate_due_date_not_past()
+    |> unique_constraint(:email)
+	end
+end
+```
+
+If the email "tracy@example.com" was already associated with an invoice and
+we tried to insert a new record, we'd get a changeset error like the
+following:
+
+
+```elixir
+{:error,
+ #Ecto.Changeset<
+   action: :insert,
+   changes: %{
+     email: "tracy@example.com"
+   },
+   errors: [
+     email: {"has already been taken",
+      [
+        constraint: :unique,
+        constraint_name: "email_index"
+      ]}
+   ],
+   data: #Registrar.Billing.Invoice<>,
+   valid?: false
+ >}
+```
+
+So constraints delegate to the database. This is especially useful when dealing with potential race conditions.
+For example, if you were checking uniqueness in a model or in the code, it's possible that a record is inserted into the database while you're doing the uniqueness check.
+By delegating to the database, we're certain that no duplicates slip in.
 
 ## But can I make changes to my data without changesets?
 
@@ -413,7 +486,5 @@ So that's a lot about the `Ecto.Changeset` module. I use it a lot over at the Fl
 - [Programming Ecto](https://pragprog.com/book/wmecto/programming-ecto)
 - [Programming
   Phoenix](https://pragprog.com/book/phoenix14/programming-phoenix-1-4)
-
-
 
 
