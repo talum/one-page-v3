@@ -118,7 +118,7 @@ updated.
 A few beats later, another developer wants to implement closing an invoice.
 Since closing an invoice is modifying an existing record, the developer
 thinks to reuse the existing `update` action in the controller and throws a
-hidden field denoting a cancel on the form.
+field denoting a cancel on the form.
 
 ```ruby
 class InvoicesController < ApplicationController
