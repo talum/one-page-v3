@@ -231,13 +231,13 @@ iex> closed_at: "2019-05-01"}
 iex> changeset = Registrar.Billing.Invoice.changeset(%Invoice{}, attributes)
 iex> #Ecto.Changeset<
   action: nil,
-  changes: %{amount_due: 15000},
+  changes: %{amount_due: 3000, due_date: ~D[2019-04-30], scheduled_send_date: ~D[2019-04-25]},
   errors: [],
   data: #Registrar.Billing.Invoice<>,
   valid?: true
 >
 iex> changeset.changes
-iex> %{amount_due: 3000, due_date: "2019-04-30", scheduled_send_date: "2019-04-25"}
+iex> %{amount_due: 3000, due_date: ~D[2019-04-30], scheduled_send_date: ~D[2019-04-25]}
 ```
 
 The extra attribute `closed_at` disappears and is not included in the set of changes. So no
