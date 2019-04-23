@@ -298,7 +298,7 @@ controller. Thanks to `Ecto.Changeset`, we have a saner way of thinking about
 updates to our records.
 
 ## Cool, and what else can changesets do?
-Let's go into a little more detail about what exactly's going on in a
+Let's go into a little more detail about what exactly is going on in a
 changeset.
 
 As I mentioned earlier, changesets are powerful and they can do a lot of
