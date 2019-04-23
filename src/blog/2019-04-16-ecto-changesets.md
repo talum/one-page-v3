@@ -398,7 +398,7 @@ In the example of `invoices`, let's say that an invoice must have a unique
 email address.
 
 ```elixir
-defmodule Registrar.Repo.Migrations.ChangeAdmissionsTable do
+defmodule Registrar.Repo.Migrations.ChangeInvoicesTable do
   use Ecto.Migration
 
   def change do
