@@ -14,12 +14,15 @@ For some apps, it's not so bad, but for apps that have become "business
 critical", it's a huge pain. At my current company, we have a hubot app that
 we've called nubot for some reason. Hubot doesn't do much besides spit out
 our company values and aggregate karma for employees, but as soon as it goes
-missing, everyone freaks out. What began as a fun project has turned into
+missing, everyone freaks out. It causes an all-out Slack panic. People start
+`@channel`ing and opening tech tickets. It's insanity. What began as a fun project has turned into
 something that our teammates rely on and expect to exist.
 
-It happened again recently when the developer who set up an app to
-facilitate a deployment flow for one of our apps from a QA server. When our
-former teammate's Slack account was deactivated, we lost the ability to
+It happened again recently when the developer who set up a node app and
+corresponding Slack app to facilitate a deployment flow for one of our internal apps from a QA server.
+He was very conscientous about providing training on the deployment flow
+itself, but we all collectively forgot to ask about the Slack integration.
+So, when our former teammate's Slack account was deactivated, we lost the ability to
 deploy our app to a QA server via a slash command.
 
 Our options were as follows:
@@ -34,7 +37,7 @@ how to set up the app again.
 ## Slack Apps
 First, I logged into our Slack workspace and poked around at the apps. It
 was a little confusing because there were "custom integrations" with slash
-commands, as well as full-fledged apps. I mistakenly thought that this setup
+commands, as well as full-fledged apps with slash commands. I mistakenly thought that this setup
 was for a slash command via a custom integration, which is where I wasted
 probably 10 minutes. As it turns out, custom integrations will be deprecated
 and possibly removed.
@@ -46,15 +49,15 @@ the "Manage" tab of the Apps directory in the Slack workspace.)
 
 After I found the orphaned app, our new problem became trying to figure out
 how to set it up again. Since no other collaborators were on the app, no one
-else could see the configuration, which was a problem.
+else could see the configuration, which was troubling.
 
 Thus began some guess and checking, which might just be my favorite problem
 solving method. (Honestly not sure if that is sarcastic or not.)
 
 ## The app code
 First, a fellow teammate and I looked at
-the source code and deduced that the code itself was a simple enough lambda
-on one of our servers. We located the server and eventually found a way to
+the source code and deduced that the code itself was a simple enough
+function running as a node app on one of our servers. We located the server and eventually found a way to
 log into it. We also tracked down its IP address.
 
 Then, we started issuing cURL requests to hit the application. After
