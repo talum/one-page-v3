@@ -5,6 +5,14 @@ import SEO from '../components/seo'
 
 const projectsList = [
   {
+    title: 'Enrollment Unification',
+    img_url: '',
+    tech: 'Phoenix',
+    integrations: 'Salesforce, Stripe',
+    description:
+      'I planned and designed this multi-phased project to migrate our legacy billing system into the Registrar app. Phase 1 included building out a payment options selection page and flow for the in-person student experience, which accounted for different pricing and payment options depending on the course and location. Phase 2 included migrating the online experience to the new flow without breaking existing functionality. The challenges here included delivering value incrementally to our students and internal stakeholders while paying down technical debt and shaping our billing code to fit the correct abstraction.',
+  },
+  {
     title: 'Registrar',
     img_url: '',
     tech: 'Phoenix',
