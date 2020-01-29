@@ -25,7 +25,7 @@ const Intro = () => (
       <div className="flex__item">
         <h1 className="heading heading--fancy">
           <div className="heading--highlight">I am Tracy Lum,</div> a full-stack
-          software engineer living in New York. I write primarily Ruby,
+          software engineer living in New York. I primarily write Ruby,
           JavaScript, Elixir, and CSS. My passions include well-designed code
           and{' '}
           <span id="js--whimsy" className="whimsy" onMouseOver={toggleConfetti}>
@@ -56,15 +56,7 @@ const Intro = () => (
     </div>
     <p>
       I also write a lot about my code, everywhere from my personal{' '}
-      <Link to="/blog">blog</Link>, to my{' '}
-      <a
-        href="https://medium.com/flatiron-labs"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        team's blog
-      </a>
-      , to{' '}
+      <Link to="/blog">blog</Link>, to{' '}
       <a
         href="https://hackernoon.com/"
         target="_blank"
@@ -107,7 +99,6 @@ const Intro = () => (
       , among others. Some other hobbies I enjoy include reading,
       middle-distance running, baking, and eating a lot of ice cream.
     </p>
-    <p>I am a graduate of the Flatiron School.</p>
   </>
 )
 
