@@ -184,7 +184,7 @@ Most of the onsites I did lasted between three and four hours and consisted
 of two or three technical screens, a couple behavioral sessions, and perhaps
 a cultural fit interview.
 
-Many involved pairing together on a loaner computer on some sort of
+Many included pairing together on a loaner computer on some sort of
 challenge. Some were Leetcode-like problems on a whiteboard. Others were
 system design on a whiteboard.
 
@@ -198,21 +198,24 @@ pairing on building out some new features in a Rails app, which was totally
 fine. Flash forward to the onsite, and suddenly three managers come in one
 after the other and want me to whiteboard algorithm-like problems.
 
-The first question I should have been able to do. It involved splitting an array into
-chunks. A couple things went wrong, though. First, I was confused that there
+The first question I should have been able to do. It was to split an array into
+chunks of a given size. A couple things went wrong, though. First, I was confused and shocked that there
 was going to be whiteboarding at all. Second, I chose to do it in JavaScript
-to get practice for myself. And third, the whiteboard markers were almost
-out of ink. So, that was not great. Plus the interviewer kept trying to rush
-me and stood very confrontationally a few feet away from me by the board.
+to practice (another interview I was preparing for was going to be entirely
+in JavaScript). And third, the whiteboard markers were almost
+out of ink. Plus the interviewer kept trying to rush
+me and stood very confrontationally a few feet away from me by the board. So, overall that was not great.
 
-**So, pro tip: Bring your own set of whiteboard markers.**
+**Pro tip: Bring your own set of whiteboard markers.**
 
 In the next question, another manager gave me a question about calculating
-the median of numbers coming from a stream. I asked some follow-up questions
-and then wrote a really naive solution on the board. She asked me about the
+the median of a stream of numbers. Medians and streams are the
+stuff of my nightmares. I asked some follow-up questions
+and then wrote a really naive solution on the board that sorted an array of
+numbers after each addition. She asked me about the
 runtime, and then she asked me if there was a better solution. Of course
-there was, but I didn't know what it was. Turns out, the optimal solution
-involved using heaps. Great.
+there was! But I didn't know what it was. Turns out, the optimal solution
+leveraged heaps. Great.
 
 The final question was to build spellcheck, which sounds intimidating, but I
 broke it down and built really naive solutions and then built on them.
@@ -229,19 +232,20 @@ company decided that they were no longer going to hiring full-stack software
 engineers though, so it fell through.
 
 A remote interview I had consisted of two behavioral / cultural screens and
-two techincal screens, one of which was to review a pull request and the
+two technical screens, one of which was to review a pull request and the
 other of which was to implement database transactions in Ruby.
 
 An interview at an ed tech startup consisted of three tech lead / manager
 types asking me one Leetcode-like question and two system design questions,
 all coded on a whiteboard. One of the system design questions was
-essentially to build Datadog. Great. It's lucky that I have been paying the
+essentially to build Datadog. It's lucky that I have been paying the
 vaguest of attention to my team's integration of Datadog into our systems.
-Otherwise, it would have gone way worse.
+Otherwise, it would have gone way worse. Fortunately, I ended up with some
+boxes and lines on the board and the semblance of something that made sense.
 
 And then I did an onsite with Google, which was truly mentally exhausting.
 Four technical, algorithm-y problems and a behavioral session. I ended up
-getting through most of the problems with some prompting, but by the end of
+getting through most of the problems with some prompting and hints, but by the end of
 the day, I was so mentally exhausted that I walked to the nearest Ample
 Hills and bought myself an ice cream cone.
 
