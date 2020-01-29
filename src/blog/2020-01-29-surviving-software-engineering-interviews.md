@@ -184,6 +184,7 @@ Most of the onsites I did lasted between three and four hours and consisted
 of two or three technical screens, a couple behavioral sessions, and perhaps
 a cultural fit interview.
 
+## The Technical Portion
 Many included pairing together on a loaner computer on some sort of
 challenge. Some were Leetcode-like problems on a whiteboard. Others were
 system design on a whiteboard.
@@ -226,6 +227,8 @@ write any sort of code.
 So that was one interview in a nutshell. I did not get the job, which was
 fine because that was just a warm-up anyway.
 
+## Some Other Experiences
+
 Another interview at a fintech startup involved three pairing sessions and
 an interview with a manager. It was very friendly and collaborative. That
 company decided that they were no longer going to hiring full-stack software
@@ -243,10 +246,28 @@ vaguest of attention to my team's integration of Datadog into our systems.
 Otherwise, it would have gone way worse. Fortunately, I ended up with some
 boxes and lines on the board and the semblance of something that made sense.
 
+## The Behavioral Interview
+For these types of interviews, you are asked to point to specific
+experiences and examples that demonstrate particular behaviors. "Tell me a
+time when you..." questions.
+
+Before I interviewed, I reflected on my jobs and tried to pick good examples
+of leadership, teamwork, and negotiation. These aren't always stories that
+made me look good. To answer some questions, I deliberately picked stories
+that I learned from, like when I stayed up too late shipping on a tight
+deadline. Or when I failed to catch a rather large edge case, that kind of
+thing. For me, the most important thing in finding stories was finding
+meaty examples that I could talk about, analyze, and discuss in detail.
+Truthfully, the stories got better the more I practiced, which is another
+reason I planned on doing a ton of practice interviews with real companies.
+
+## Big Tech
 And then I did an onsite with Google, which was truly mentally exhausting.
-Four technical, algorithm-y problems and a behavioral session. I ended up
+It was actually the most challenging interview I've done to date because it
+is just so long and because there's so much time spent under duress at a
+whiteboard. Four technical, algorithm-y problems and a behavioral session. I ended up
 getting through most of the problems with some prompting and hints, but by the end of
-the day, I was so mentally exhausted that I walked to the nearest Ample
+the day, I was so drained that I walked to the nearest Ample
 Hills and bought myself an ice cream cone.
 
 # Self-Care and Dealing with Disappointment
