@@ -36,6 +36,7 @@ If you are looking for tips on how to survive interviewing mixed in with
 some fun stories, you've come to the right place! Because I am starting a
 job in about a month and I have got the hot goss.
 
+
 # Make a Plan and Prep
 I'm a planner. It is just in my nature. To that effect, I started plotting an interview strategy a
 year ago and came up with a rough timeline of when I wanted to have a new
@@ -94,6 +95,7 @@ same thread. Previously I've used note-taking software, but I found that it
 was much easier to have all the information about an opportunity in one
 place.
 
+
 # Networking and Applying
 So, generally, I am not a big fan of networking in the traditional sense,
 but I am pretty good at connecting with people and maintaining friendships.
@@ -106,6 +108,7 @@ advice I've received from coaches, it is practically useless to apply
 blindly online. Occasionally I do it just to see what'll happen, but I'm
 never counting on a response from those. For any place I actually want to
 work at, I get a referral.
+
 
 # Studying
 Just from this round of interviewing, I found that studying was actually a
@@ -139,6 +142,7 @@ it my best shot.
 Some people will tell you to do mock interviews. You can, I guess, but I
 find them really awkward, so I didn't.
 
+
 # The Phone Screen
 Generally, after I applied, a recruiter would reach out to me and schedule a
 phone screen. For the most part, this was to get a sense of my background,
@@ -167,6 +171,7 @@ A couple companies had me do some domain modeling and system design as part
 of the screen. But yeah, a lot of the questions were very similar to those
 you would find on Leetcode.
 
+
 # The Take-Home Challenge
 Another somewhat popular technical screen is the take-home challenge. These
 can take anywhere between a few hours to a few days depending on the
@@ -184,7 +189,7 @@ Most of the onsites I did lasted between three and four hours and consisted
 of two or three technical screens, a couple behavioral sessions, and perhaps
 a cultural fit interview.
 
-## The Technical Portion
+##*The Technical Portion*
 Many included pairing together on a loaner computer on some sort of
 challenge. Some were Leetcode-like problems on a whiteboard. Others were
 system design on a whiteboard.
@@ -227,7 +232,7 @@ write any sort of code.
 So that was one interview in a nutshell. I did not get the job, which was
 fine because that was just a warm-up anyway.
 
-## Some Other Experiences
+##*Some Other Experiences*
 
 Another interview at a fintech startup involved three pairing sessions and
 an interview with a manager. It was very friendly and collaborative. That
@@ -246,7 +251,7 @@ vaguest of attention to my team's integration of Datadog into our systems.
 Otherwise, it would have gone way worse. Fortunately, I ended up with some
 boxes and lines on the board and the semblance of something that made sense.
 
-## The Behavioral Interview
+##*The Behavioral Interview*
 For these types of interviews, you are asked to point to specific
 experiences and examples that demonstrate particular behaviors. "Tell me a
 time when you..." questions.
@@ -261,7 +266,12 @@ meaty examples that I could talk about, analyze, and discuss in detail.
 Truthfully, the stories got better the more I practiced, which is another
 reason I planned on doing a ton of practice interviews with real companies.
 
-## Big Tech
+If you don't have any of those types of stories, perhaps trying to create
+opportunities for yourself at your current role could help. Ask your
+manager for guidance. Come up with a proposal. Show some initiative and
+makes a good story.
+
+##*Big Tech*
 And then I did an onsite with Google, which was truly mentally exhausting.
 It was actually the most challenging interview I've done to date because it
 is just so long and because there's so much time spent under duress at a
@@ -269,6 +279,7 @@ whiteboard. Four technical, algorithm-y problems and a behavioral session. I end
 getting through most of the problems with some prompting and hints, but by the end of
 the day, I was so drained that I walked to the nearest Ample
 Hills and bought myself an ice cream cone.
+
 
 # Self-Care and Dealing with Disappointment
 As you might have discerned, my job search process had its ups and downs,
@@ -291,6 +302,7 @@ definitely indulged myself if I had a particularly rough experience. I also
 made sure I reserved time to have fun and see friends. I read a ton of
 fiction and also watched a bunch of TV to unwind because job searching is
 just plain stressful and you shouldn't burn yourself out on it.
+
 
 # Dealing with Offers
 Getting offers is great! Just from my experience, it pays to be super
@@ -315,8 +327,12 @@ Here's a summary to take with you on your next job search journey.
 1. Make some sort of plan and rough timeline.
 2. Catch up with your friends and former colleagues as a form of networking.
 3. Do some studying, even if it's just a little.
-4. Buy your own whiteboard markers and carry them with you to interviews.
-5. Make sure you take breaks and treat yourself. Interviewing is stressful.
+4. Review your job experiences and projects and look for meaty stories that
+   you can talk about in a behavioral interview. If you don't have any,
+   see if you can angle your way into those types of opportunities at your
+   current role.
+5. Buy your own whiteboard markers and carry them with you to interviews.
+6. Make sure you take breaks and treat yourself. Interviewing is stressful.
 
 And that's about it. That's what it takes to survive the software engineering
 interview.
