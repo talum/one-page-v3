@@ -37,8 +37,7 @@ some fun stories, you've come to the right place! Because I am starting a
 job in about a month and I have got the hot goss.
 
 # Make a Plan and Prep
-If you're like me, then you like to plan things. I'm a planner. It is just
-in my nature. To that effect, I started plotting an interview strategy a
+I'm a planner. It is just in my nature. To that effect, I started plotting an interview strategy a
 year ago and came up with a rough timeline of when I wanted to have a new
 job. My timeline wasn't exact, which stressed me out, but I quickly learned
 to get over it because when you're interviewing there are also factors outside of your control (budget cuts, other candidates, useless interview questions, etc.).
@@ -64,7 +63,7 @@ Knowing that I would probably bomb a couple interviews in the beginning, I
 set aside time for simultaneous studying and interviews with companies that
 I didn't really care about. And then, since I wanted to take a crack at some
 of the bigger tech companies, I knew I needed a lot of time to actually
-learn algorithms. (For what it's worth, my experience with companies who ask
+learn algorithms and data structures. (For what it's worth, my experience with companies who ask
 about algorithms and data structures has been mixed. Many want to know if
 you understand time and space complexity. Fewer are interested in whether
 you know how to implement and use a heap.)
@@ -121,26 +120,179 @@ company, I did a lot of studying.
 
 First, I took a couple classes online about algorithms.
 
-1) The Coding Interview Bootcamp: Algorithms + Data Structures by Steven
-Grider https://www.udemy.com/share/101WU0AkIbeFdWTXQ=/
-2) JavaScript Algorithms and Data Structures Masterclass with Colt Steele
-https://www.udemy.com/share/101XY2AkIbeFdWTXQ=/
+1) [The Coding Interview Bootcamp: Algorithms + Data Structures by Steven
+Grider](https://www.udemy.com/share/101WU0AkIbeFdWTXQ=/)
+2) [JavaScript Algorithms and Data Structures Masterclass with Colt Steele](
+https://www.udemy.com/share/101XY2AkIbeFdWTXQ=/)
 
-I read a couple books, well, parts of some books.
-1) Cracking the Coding Interview
-2) The Algorithm Design Manual
+I read a couple books, well, parts of some books. I didn't read them from
+end to end.
+1) [Cracking the Coding
+Interview](http://www.crackingthecodinginterview.com/) by Gayle Laakman
+McDowell
+2) [The Algorithm Design Manual](http://www.algorist.com/) by Steven Skiena
 
-I practiced on Leetcode every day.
+I practiced on [Leetcode](https://leetcode.com/) every day. If I hadn't been
+angling for Big Tech, I wouldn't have done this, but I figured I would give
+it my best shot.
 
+Some people will tell you to do mock interviews. You can, I guess, but I
+find them really awkward, so I didn't.
 
 # The Phone Screen
+Generally, after I applied, a recruiter would reach out to me and schedule a
+phone screen. For the most part, this was to get a sense of my background,
+interests, and salary expectations. And then they would tell me about next
+steps. In most cases, the next step was either scheduling a technical phone
+screen or a take-home challenge.
+
+For technical phone screens, I got a lot of Leetcode-like problems, but some
+involved pairing on a real app. Usually I was allowed to pick whatever
+language I wanted, which for interviews is always Ruby. I find that Ruby
+lets you express exactly what you want to code with as little friction as
+possible.
+
+I bombed the first technical interview phone screen I had. A startup founder had
+reached out to me via email and he seemed like a reasonable person so we set
+up a time to chat. Via Code Sandbox, we set up a code pairing session and he
+wanted me to build the game Set.
+
+Minor aside: I hate building games for code challenges.
+
+I had never played or heard of the game Set, so as he explained the rules,
+it pretty much went over my head. And we got almost nowhere. So that
+interview was a bust.
+
+A couple companies had me do some domain modeling and system design as part
+of the screen. But yeah, a lot of the questions were very similar to those
+you would find on Leetcode.
+
 # The Take-Home Challenge
+Another somewhat popular technical screen is the take-home challenge. These
+can take anywhere between a few hours to a few days depending on the
+company.
+
+A few companies have had me build out a link shortening app in whatever
+framework I wanted.
+
+Others had me critique a design document. I thought this was a pretty great
+idea actually because it was reflective of how the team works and gives a
+good indication of your thought process and ability to communicate.
+
 # The Onsite
-# Self-Care
-# The Follow-Up
-## Dealing with Declines
-## Dealing with Offers
-# References
+Most of the onsites I did lasted between three and four hours and consisted
+of two or three technical screens, a couple behavioral sessions, and perhaps
+a cultural fit interview.
+
+Many involved pairing together on a loaner computer on some sort of
+challenge. Some were Leetcode-like problems on a whiteboard. Others were
+system design on a whiteboard.
+
+People tend to dislike whiteboarding. With enough practice, I think you get
+used to it. That isn't to say I'm good at it necessarily.
+
+For one of the first interviews I did at a pharmacy startup, the
+recruiter informed me that the interviews would not involve any type of
+"algorithm-y" questions. And that was true of the phone screen -- I ended up
+pairing on building out some new features in a Rails app, which was totally
+fine. Flash forward to the onsite, and suddenly three managers come in one
+after the other and want me to whiteboard algorithm-like problems.
+
+The first question I should have been able to do. It involved splitting an array into
+chunks. A couple things went wrong, though. First, I was confused that there
+was going to be whiteboarding at all. Second, I chose to do it in JavaScript
+to get practice for myself. And third, the whiteboard markers were almost
+out of ink. So, that was not great. Plus the interviewer kept trying to rush
+me and stood very confrontationally a few feet away from me by the board.
+
+**So, pro tip: Bring your own set of whiteboard markers.**
+
+In the next question, another manager gave me a question about calculating
+the median of numbers coming from a stream. I asked some follow-up questions
+and then wrote a really naive solution on the board. She asked me about the
+runtime, and then she asked me if there was a better solution. Of course
+there was, but I didn't know what it was. Turns out, the optimal solution
+involved using heaps. Great.
+
+The final question was to build spellcheck, which sounds intimidating, but I
+broke it down and built really naive solutions and then built on them.
+That's basically what you should always do. Get something working. Then
+build on it. The worst thing you can do is to sit or stand silently and not
+write any sort of code.
+
+So that was one interview in a nutshell. I did not get the job, which was
+fine because that was just a warm-up anyway.
+
+Another interview at a fintech startup involved three pairing sessions and
+an interview with a manager. It was very friendly and collaborative. That
+company decided that they were no longer going to hiring full-stack software
+engineers though, so it fell through.
+
+A remote interview I had consisted of two behavioral / cultural screens and
+two techincal screens, one of which was to review a pull request and the
+other of which was to implement database transactions in Ruby.
+
+An interview at an ed tech startup consisted of three tech lead / manager
+types asking me one Leetcode-like question and two system design questions,
+all coded on a whiteboard. One of the system design questions was
+essentially to build Datadog. Great. It's lucky that I have been paying the
+vaguest of attention to my team's integration of Datadog into our systems.
+Otherwise, it would have gone way worse.
+
+And then I did an onsite with Google, which was truly mentally exhausting.
+Four technical, algorithm-y problems and a behavioral session. I ended up
+getting through most of the problems with some prompting, but by the end of
+the day, I was so mentally exhausted that I walked to the nearest Ample
+Hills and bought myself an ice cream cone.
+
+# Self-Care and Dealing with Disappointment
+As you might have discerned, my job search process had its ups and downs,
+but a lot of the factors were out of my control.
+
+For some companies, their hiring needs changed. Others decided it wasn't a
+good fit or the interviewers didn't provide "enough positive feedback" to
+move forward.
+
+For yet another company, the recruiter promised to follow up with next steps
+the following day and then I didn't hear from them again for months, despite
+my follow-ups.
+
+So things happen. You can't really get upset about failure and
+disappointments when you really gave it your best shot.
+
+But I did want to note that you can and should take some time to process
+your feelings and reward yourself. I love ginger beer and ice cream and I
+definitely indulged myself if I had a particularly rough experience. I also
+made sure I reserved time to have fun and see friends. I read a ton of
+fiction and also watched a bunch of TV to unwind because job searching is
+just plain stressful and you shouldn't burn yourself out on it.
+
+# Dealing with Offers
+Getting offers is great! Just from my experience, it pays to be super
+straightforward about your timeline and your salary expectations. If I end
+up declining an offer, I always express my gratitude and try to keep the
+door open in case something changes in the future.
+
+If I end up accepting an offer, I of course try to negotiate. Whether that's
+on salary, bonus, PTO, or a later start date, it pays off to negotiate.
+
+After being burned out at my current role, I decided that I needed to take
+some extra time off between jobs, and my new gig was super accommodating and
+respectful of that. So figure out what you need and ask for it. The worst
+thing I did to myself was to jump into a new job immediately without taking
+any time.
+
 
 # tl;dr tips without context
+Okay, so you've reached the end of this very long post! Congratulations.
+Here's a summary to take with you on your next job search journey.
+
+1. Make some sort of plan and rough timeline.
+2. Catch up with your friends and former colleagues as a form of networking.
+3. Do some studying, even if it's just a little.
+4. Buy your own whiteboard markers and carry them with you to interviews.
+5. Make sure you take breaks and treat yourself. Interviewing is stressful.
+
+And that's about it. That's what it takes to survive the software engineering
+interview.
 
