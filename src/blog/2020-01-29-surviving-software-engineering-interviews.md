@@ -11,16 +11,16 @@ is easy and fun, they're lying.
 
 A few years ago, as a brand-new apprentice developer, I was doing an AMA session on campus with current students
 of the bootcamp I had attended when a student asked me about the
-job search. I said, "It sucks." They laughed, betraying the horror on their
+job search. I said, "It sucks." They all laughed, betraying the horror on their
 faces at the blunt confirmation of their worst fears. Some people in the back might have cried.
 
 Afterward, my manager advised me to maybe not say that. But it was true then, and it's
 definitely true now.
 
-Tech interviewing is overall an unpleasant process that makes you question even after many years of professional
+Tech interviewing is an overall unpleasant process that makes you question even after many years of professional
 experience your validity as a software engineer as well as your own self-worth and intelligence.
 
-I've been programming professionally for four years. I code; therefore, I am a
+I've been programming professionally for four start-up years, which is something like eight regular years (I'm making up my own multiplier). I code; therefore, I am a
 developer. I have built features from end-to-end. I have designed systems,
 completed massive migrations in a legacy codebase, and also dipped my toes
 into the world of ops. I have done lots of complex things and done them well. But
@@ -39,7 +39,7 @@ job in about a month and I have got the hot goss.
 
 # Make a Plan and Prep
 I'm a planner. It is just in my nature. To that effect, I started plotting an interview strategy a
-year ago and came up with a rough timeline of when I wanted to have a new
+year ago after things started going south on my team and came up with a rough timeline of when I wanted to have a new
 job. My timeline wasn't exact, which stressed me out, but I quickly learned
 to get over it because when you're interviewing there are also factors outside of your control (budget cuts, other candidates, useless interview questions, etc.).
 
@@ -48,7 +48,9 @@ it's really useful to come up with a general plan of attack. Interviewing
 is, unfortunately, an entirely different skill set. You need to remember to
 talk out loud and communicate your thought process. You need to know obscure
 details about frameworks and be able to articulate them. You need to be able
-to stomach stress and not throw up during onsites. It's a lot, and you need
+to stomach stress and not throw up during onsites. Sometimes you even need
+to know the meal to choose during the lunch interview that will require the
+least amount of chewing and slurping. It's a lot, and you need
 to practice.
 
 Working backward from my target new job start date, I estimated how long
@@ -69,7 +71,7 @@ about algorithms and data structures has been mixed. Many want to know if
 you understand time and space complexity. Fewer are interested in whether
 you know how to implement and use a heap.)
 
-This left me with this rough timeline:
+Factoring in all of these knowns, I was left with this rough timeline:
 
 **Month 1:** Identify companies that seem cool and interesting. Start chatting
 up friends and ask them what they're working on and if they know anyone else
@@ -113,7 +115,9 @@ work at, I get a referral.
 # Studying
 Just from this round of interviewing, I found that studying was actually a
 good idea. In the past when I'd interviewed, my primary focus was building
-side projects to talk about. This time around, with tools like CoderPad and
+side projects that I could talk about in an interview setting.
+
+This time around, with tools like CoderPad and
 CodeSandbox or whatever else is out there, it seems like a lot of companies
 actually want to do some real code challenges (some problem-solving,
 algorithm-y questions and some pair programming in a codebase challenges) with you in real time.
@@ -151,24 +155,36 @@ steps. In most cases, the next step was either scheduling a technical phone
 screen or a take-home challenge.
 
 For technical phone screens, I got a lot of Leetcode-like problems, but some
-involved pairing on a real app. Usually I was allowed to pick whatever
-language I wanted, which for interviews is always Ruby. I find that Ruby
+involved pairing on a real app. Most were conducted over Zoom. Usually I was allowed to pick whatever
+language I wanted, which for interviews is always Ruby.
+
+Yes, you should pick a language you're familiar with, and I'm familiar with
+a handful, but I'm the most proficient and efficient in Ruby. I find that Ruby
 lets you express exactly what you want to code with as little friction as
-possible.
+possible, which means that you'll end up writing more correct code and be
+able to debug it faster. In general, demonstrating your ability to think and
+code live is way more valuable than your ability to configure an app from memory.
+But that's just me and what I look for when I'm interviewing candidates.
 
 I bombed the first technical interview phone screen I had. A startup founder had
 reached out to me via email and he seemed like a reasonable person so we set
 up a time to chat. Via Code Sandbox, we set up a code pairing session and he
 wanted me to build the game Set.
 
-Minor aside: I hate building games for code challenges.
+Minor aside: I hate building games for code challenges. I think they bias
+toward people who have heard of the game or who have studied combinations or
+permutations recently, and you never get very far into building a game with
+just an hour.
 
 I had never played or heard of the game Set, so as he explained the rules,
-it pretty much went over my head. And we got almost nowhere. So that
-interview was a bust.
+it pretty much went over my head. I was able to build a deck of cards, and we got almost nowhere. So that
+interview was a bust. After that botched interview, I seriously questioned
+whether I had the capacity to code at all, but then I reviewed the projects
+I've worked on and thought about the profound cultural impact I've had on my
+team and brushed it aside.
 
 A couple companies had me do some domain modeling and system design as part
-of the screen. But yeah, a lot of the questions were very similar to those
+of the screen. But overall, a lot of the questions were very similar to those
 you would find on Leetcode.
 
 
@@ -178,11 +194,18 @@ can take anywhere between a few hours to a few days depending on the
 company.
 
 A few companies have had me build out a link shortening app in whatever
-framework I wanted.
+framework I wanted. For app-building take-homes, the greatest advice I can
+offer is to read the directions, write tests, and add a readme describing
+the app and includes setup instructions. Also, unless you're
+interviewing for a front-end role, you can probably get away with using very
+minimal styling or a framework like Bootstrap.
 
 Others had me critique a design document. I thought this was a pretty great
 idea actually because it was reflective of how the team works and gives a
-good indication of your thought process and ability to communicate.
+good indication of your thought process and ability to communicate. It
+helped that my team was real big into design docs recently, so this was
+basically just like doing my normal job.
+
 
 # The Onsite
 Most of the onsites I did lasted between three and four hours and consisted
@@ -200,7 +223,8 @@ used to it. That isn't to say I'm good at it necessarily.
 For one of the first interviews I did at a pharmacy startup, the
 recruiter informed me that the interviews would not involve any type of
 "algorithm-y" questions. And that was true of the phone screen -- I ended up
-pairing on building out some new features in a Rails app, which was totally
+pairing on building out some new features in an app that mimicked some of
+the basic functionality of the startup's core platform, which was totally
 fine. Flash forward to the onsite, and suddenly three managers come in one
 after the other and want me to whiteboard algorithm-like problems.
 
@@ -234,22 +258,26 @@ fine because that was just a warm-up anyway.
 
 ##*Some Other Experiences*
 
-Another interview at a fintech startup involved three pairing sessions and
-an interview with a manager. It was very friendly and collaborative. That
+A fintech startup: Three pairing sessions with software engineers on
+building well-defined features in a Rails app and
+a behavioral interview with a manager over an afternoon. It was very friendly and collaborative. That
 company decided that they were no longer going to hiring full-stack software
 engineers though, so it fell through.
 
-A remote interview I had consisted of two behavioral / cultural screens and
+An infrastructure as a service company: This was a remote interview consisting of two behavioral / cultural screens and
 two technical screens, one of which was to review a pull request and the
 other of which was to implement database transactions in Ruby.
 
-An interview at an ed tech startup consisted of three tech lead / manager
+An edtech startup: Three tech lead / manager
 types asking me one Leetcode-like question and two system design questions,
-all coded on a whiteboard. One of the system design questions was
+all coded on a whiteboard. The first question was to build autosuggest.
+One of the system design questions was
 essentially to build Datadog. It's lucky that I have been paying the
 vaguest of attention to my team's integration of Datadog into our systems.
 Otherwise, it would have gone way worse. Fortunately, I ended up with some
 boxes and lines on the board and the semblance of something that made sense.
+I've blanked on what the third question was. Anyway, the company decided to
+go with another candidate in spite of generally positive feedback.
 
 ##*The Behavioral Interview*
 For these types of interviews, you are asked to point to specific
@@ -278,7 +306,8 @@ is just so long and because there's so much time spent under duress at a
 whiteboard. Four technical, algorithm-y problems and a behavioral session. I ended up
 getting through most of the problems with some prompting and hints, but by the end of
 the day, I was so drained that I walked to the nearest Ample
-Hills and bought myself an ice cream cone.
+Hills and bought myself an ice cream cone. I didn't end up getting the job,
+but I'm proud to say that I survived.
 
 
 # Self-Care and Dealing with Disappointment
@@ -294,7 +323,11 @@ the following day and then I didn't hear from them again for months, despite
 my follow-ups.
 
 So things happen. You can't really get upset about failure and
-disappointments when you really gave it your best shot.
+disappointments when you really gave it your best shot. Failing to get a job
+doesn't make you any less of a good person or programmer. Maybe you had an
+unfair question or a particularly nasty interviewer. Don't beat yourself up
+about it. Just assess if there's something you can improve, work on it, and
+move on.
 
 But I did want to note that you can and should take some time to process
 your feelings and reward yourself. I love ginger beer and ice cream and I
@@ -332,8 +365,8 @@ Here's a summary to take with you on your next job search journey.
    see if you can angle your way into those types of opportunities at your
    current role.
 5. Buy your own whiteboard markers and carry them with you to interviews.
-6. Make sure you take breaks and treat yourself. Interviewing is stressful.
+6. Make sure you take breaks and treat yourself and see friends. Interviewing is stressful.
 
 And that's about it. That's what it takes to survive the software engineering
-interview.
+interview in 2020.
 
