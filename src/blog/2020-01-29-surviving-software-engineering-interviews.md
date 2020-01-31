@@ -6,9 +6,6 @@ comments: true
 categories: ["interviewing", "code challenges"]
 ---
 
-If anyone tells you that interviewing for a new job as a software engineer
-is easy and fun, they're lying.
-
 A few years ago, as a brand-new apprentice developer, I was doing an AMA session on campus with current students
 of the bootcamp I had attended when a student asked me about the
 job search. I said, "It sucks." They all laughed, betraying the horror on their
@@ -16,6 +13,9 @@ faces at the blunt confirmation of their worst fears. Some people in the back mi
 
 Afterward, my manager advised me to maybe not say that. But it was true then, and it's
 definitely true now.
+
+So, basically, if anyone tells you that interviewing for a new job as a software engineer
+is easy and fun, they're lying.
 
 Tech interviewing is an overall unpleasant process that makes you question even after many years of professional
 experience your validity as a software engineer as well as your own self-worth and intelligence.
@@ -26,41 +26,49 @@ completed massive migrations in a legacy codebase, and also dipped my toes
 into the world of ops. I have done lots of complex things and done them well. But
 never have I doubted my abilities more than when I was interviewing.
 
-But it's okay. Like, you'll get through it, survive. You'll bomb a couple interviews,
+But it's okay. I survived, and so will you. You'll bomb a couple interviews,
 make some good impressions. You'll learn a lot about yourself in the process.
 You might learn some new stuff about coding. You'll meet some weirdos as
 well as some really awesome people, and at the end, you'll probably make
 more money in the process. So overall, I suppose it's worth the suffering.
 
 If you are looking for tips on how to survive interviewing mixed in with
-some fun stories, you've come to the right place! Because I am starting a
-job in about a month and I have got the hot goss.
+some fun anecdotes, you've come to the right place! Because I am starting a
+job in about a month and I have some stories to share.
 
 
 # Make a Plan and Prep
-I'm a planner. It is just in my nature. To that effect, I started plotting an interview strategy a
-year ago after things started going south on my team and came up with a rough timeline of when I wanted to have a new
-job. My timeline wasn't exact, which stressed me out, but I quickly learned
-to get over it because when you're interviewing there are also factors outside of your control (budget cuts, other candidates, useless interview questions, etc.).
+I'm a planner. It is just in my nature. To that effect, I started plotting an interview strategy and timeline a
+year ago after things started going south on my team. That makes me sound like I was two-timing my
+current team for an entire year, but whatever. I needed to know which steps
+I needed to take in order to reach my goals.
 
 Especially when you are starting to interview after a few years on the job, I think
 it's really useful to come up with a general plan of attack. Interviewing
 is, unfortunately, an entirely different skill set. You need to remember to
 talk out loud and communicate your thought process. You need to know obscure
 details about frameworks and be able to articulate them. You need to be able
-to stomach stress and not throw up during onsites. Sometimes you even need
+to stomach stress and not throw up during onsites as you stand, panicking
+and sweaty, at a whiteboard as your mind blanks. Sometimes you even need
 to know the meal to choose during the lunch interview that will require the
 least amount of chewing and slurping. It's a lot, and you need
 to practice.
 
-Working backward from my target new job start date, I estimated how long
-it would take me to study and network and interview. For the most part, each
-company's process took one month from start to end since there was about a
-week between each phase of the process and most had three or four steps:
+(Maybe it's easier to always be interviewing? I'm sure there are pros and
+con to that.)
 
-1) Recruiter screen in response to referral or application
-2) Technical phone/video screens with software engineer or manager
-3) Onsite interview
+Working backward from my target new job start date, I estimated how long
+it would take me to study and network and interview. For the most part,
+I found that each
+company's process takes about one month from start to end, since the
+interview process typically has three or four steps and it takes about a
+week in between for team's to gather feedback and schedule next steps.
+
+**The Typical Interview Process**
+
+1) Recruiter screen in response to referral or application (15-30 min)
+2) One or more technical phone/video screens with software engineer or manager (1 hour each)
+3) Onsite interview (3-4 hours)
 
 Knowing that I would probably bomb a couple interviews in the beginning, I
 set aside time for simultaneous studying and interviews with companies that
@@ -115,15 +123,24 @@ work at, I get a referral.
 # Studying
 Just from this round of interviewing, I found that studying was actually a
 good idea. In the past when I'd interviewed, my primary focus was building
-side projects that I could talk about in an interview setting.
+side projects that I could talk about in an interview setting. And don't get
+me wrong, for some people, a job opportunity might fall into your lap,
+you'll ace the interviews, and get the new job. But actually putting in the
+time to study can't really hurt. Some people just get lucky. The rest of us
+need to study.
 
-This time around, with tools like CoderPad and
-CodeSandbox or whatever else is out there, it seems like a lot of companies
-actually want to do some real code challenges (some problem-solving,
-algorithm-y questions and some pair programming in a codebase challenges) with you in real time.
+When I was interviewing this time around, with tools like CoderPad and
+CodeSandbox or whatever else is out there, it seemed like a lot of companies
+actually wanted to do some real code challenges (some problem-solving,
+algorithm-y questions and some pair programming in a codebase challenges) with me in real time.
+Other companies did those same challenges in a Google Doc because they
+didn't want to pay for those services, which says something (not sure what)
+about their company's stability... Anyway. Many companies are really into
+this live coding thing.
 
-So with that in mind, and knowing that I wanted to interview at a large tech
-company, I did a lot of studying.
+With that in mind, and knowing that I wanted to interview at a large tech
+company, I did a lot of studying. In general, I wanted to get exposed to as
+many types of problems as possible.
 
 First, I took a couple classes online about algorithms.
 
@@ -149,7 +166,7 @@ find them really awkward, so I didn't.
 
 # The Phone Screen
 Generally, after I applied, a recruiter would reach out to me and schedule a
-phone screen. For the most part, this was to get a sense of my background,
+phone screen. We'd cover topics like my background,
 interests, and salary expectations. And then they would tell me about next
 steps. In most cases, the next step was either scheduling a technical phone
 screen or a take-home challenge.
@@ -177,11 +194,13 @@ permutations recently, and you never get very far into building a game with
 just an hour.
 
 I had never played or heard of the game Set, so as he explained the rules,
-it pretty much went over my head. I was able to build a deck of cards, and we got almost nowhere. So that
+it pretty much went over my head. I could not for the life of me figure out what he was trying to explain.
+The cards had shapes and colors? You had to match some but not all of the
+attributes? What the heck was a Set?
+
+I was able to build a deck of cards, but after that we got almost nowhere. Needless to say, that
 interview was a bust. After that botched interview, I seriously questioned
-whether I had the capacity to code at all, but then I reviewed the projects
-I've worked on and thought about the profound cultural impact I've had on my
-team and brushed it aside.
+whether I had the capacity to code at all.
 
 A couple companies had me do some domain modeling and system design as part
 of the screen. But overall, a lot of the questions were very similar to those
@@ -204,7 +223,8 @@ Others had me critique a design document. I thought this was a pretty great
 idea actually because it was reflective of how the team works and gives a
 good indication of your thought process and ability to communicate. It
 helped that my team was real big into design docs recently, so this was
-basically just like doing my normal job.
+basically just like doing my normal job. For a different company. On a
+contrived problem.
 
 
 # The Onsite
@@ -234,7 +254,7 @@ was going to be whiteboarding at all. Second, I chose to do it in JavaScript
 to practice (another interview I was preparing for was going to be entirely
 in JavaScript). And third, the whiteboard markers were almost
 out of ink. Plus the interviewer kept trying to rush
-me and stood very confrontationally a few feet away from me by the board. So, overall that was not great.
+me and stood very confrontationally a few feet away from me by the board.
 
 **Pro tip: Bring your own set of whiteboard markers.**
 
@@ -245,7 +265,7 @@ and then wrote a really naive solution on the board that sorted an array of
 numbers after each addition. She asked me about the
 runtime, and then she asked me if there was a better solution. Of course
 there was! But I didn't know what it was. Turns out, the optimal solution
-leveraged heaps. Great.
+leveraged heaps. Which I had only _just_ learned about.
 
 The final question was to build spellcheck, which sounds intimidating, but I
 broke it down and built really naive solutions and then built on them.
