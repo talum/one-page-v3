@@ -39,9 +39,7 @@ job in about a month and I have some stories to share.
 
 # Make a Plan and Prep
 I'm a planner. It is just in my nature. To that effect, I started plotting an interview strategy and timeline a
-year ago after things started going south on my team. That makes me sound like I was two-timing my
-current team for an entire year, but whatever. I needed to know which steps
-I needed to take in order to reach my goals.
+year ago.
 
 Especially when you are starting to interview after a few years on the job, I think
 it's really useful to come up with a general plan of attack. Interviewing
