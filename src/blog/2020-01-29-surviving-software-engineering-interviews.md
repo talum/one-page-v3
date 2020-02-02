@@ -8,7 +8,7 @@ categories: ["interviewing", "code challenges"]
 
 A few years ago, as a brand-new apprentice developer, I was doing an AMA session on campus with current students
 of the bootcamp I had attended when a student asked me about the
-job search. I said, "It sucks." They all laughed, betraying the horror on their
+job search. Without missing a beat, I said, "It sucks." They all laughed, betraying the horror on their
 faces at the blunt confirmation of their worst fears. Some people in the back might have cried.
 
 Afterward, my manager advised me to maybe not say that. But it was true then, and it's
