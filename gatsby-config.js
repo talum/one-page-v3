@@ -9,8 +9,10 @@ module.exports = {
     title: 'Tracy Lum',
     description: 'Tracy Lum is a full-stack software engineer based in New York.',
     author: '@talum',
+    siteUrl: 'https://tracylum.com'
   },
   plugins: [
+    `gatsby-plugin-feed`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
