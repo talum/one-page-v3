@@ -58,7 +58,7 @@ const Intro = () => (
       I also write a lot about my code, everywhere from my personal{' '}
       <Link to="/blog">blog</Link>, to{' '}
       <a
-        href="https://hackernoon.com/"
+        href="https://hackernoon.com/@tracidini"
         target="_blank"
         rel="noopener noreferrer"
       >

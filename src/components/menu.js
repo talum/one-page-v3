@@ -6,6 +6,7 @@ const menuItems = [
   { title: 'About', path: '/' },
   { title: 'Projects', path: '/projects' },
   { title: 'Blog', path: '/blog' },
+  { title: 'Writing', path: '/writing' },
   { title: 'Contact', path: '/contact' },
 ]
 
