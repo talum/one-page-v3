@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Convince Yourself to Use TDD"
-date: 2020-03-22T10:01:00-04:00
+date: 2020-04-04T14:01:00-04:00
 comments: true
 categories: ["tdd", "test-driven development"]
 ---
