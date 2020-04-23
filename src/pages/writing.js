@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -17,8 +17,17 @@ const publicationsList = [
   },
   {
     title: 'Little Old Lady Comedy',
-    url: 'https://littleoldladycomedy.com/2020/03/16/what-your-face-mask-says-about-you-this-pandemic-season/',
-    featured: [],
+    url: 'https://littleoldladycomedy.com/author/tlumwriting/',
+    featured: [
+      {
+        title: 'What Your Face Mask Says About You This Pandemic Season',
+        url: 'https://littleoldladycomedy.com/2020/03/16/what-your-face-mask-says-about-you-this-pandemic-season/'
+      },
+      {
+        title: 'Group Party Games Repurposed for One (Quarantine Edition)',
+        url: 'https://littleoldladycomedy.com/2020/04/23/group-party-games-repurposed-for-one-quarantine-edition/'
+      },
+    ],
   },
   {
     title: 'Hello Giggles',
@@ -73,6 +82,16 @@ const Writing = () => (
               {publication.url}
             </a>
           </p>
+          { !!publication.featured.length &&
+            <Fragment>
+              <h3>Featured</h3>
+              <ul>
+                {publication.featured.map(({title, url}) => (
+                  <li><a href={url} target="_blank" rel="noopener noreferrer">{title}</a></li>
+                ))}
+              </ul>
+            </Fragment>
+          }
         </div>
       </div>
     ))}
