@@ -5,6 +5,13 @@ import SEO from '../components/seo'
 
 const projectsList = [
   {
+    title: 'Vimeo OTT Promotions',
+    img_url: '',
+    tech: 'Rails, React',
+    integrations: 'Stripe',
+    description: 'As part of the Vimeo OTT team, I worked on implementing the ability to offer promotions to existing subscribers, which involved adding a React form to a legacy page and updating our backend logic to correctly discount renewal prices and expire promotions at the appropriate time.'
+  },
+  {
     title: 'Enrollment Unification',
     img_url: '',
     tech: 'Phoenix',
