@@ -9,7 +9,7 @@ module.exports = {
     title: 'Tracy Lum',
     description: 'Tracy Lum is a full-stack software engineer based in New York.',
     author: '@talum',
-    siteUrl: 'https://tracylum.com'
+    siteUrl: 'https://www.tracylum.com'
   },
   plugins: [
     `gatsby-plugin-feed`,
