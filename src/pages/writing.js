@@ -21,6 +21,16 @@ const publicationsList = [
     ],
   },
   {
+    title: 'Journal of Compressed Creative Arts',
+    url: 'http://matterpress.com/',
+    featured: [
+      {
+        title: 'The Old Lady',
+        url: 'http://matterpress.com/journal/2021/03/18/cnf-the-old-lady/'
+      },
+    ],
+  },
+  {
     title: 'Thought Catalog',
     url: 'http://thoughtcatalog.com/tracy-lum/',
     featured: [],
