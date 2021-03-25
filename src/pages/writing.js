@@ -31,6 +31,16 @@ const publicationsList = [
     ],
   },
   {
+    title: 'HerStry',
+    url: 'https://herstryblg.com/',
+    featured: [
+      {
+        title: 'Crafting My Way Toward Accomplishment',
+        url: 'https://herstryblg.com/true/2021/3/25/crafting-my-way-toward-accomplishment'
+      },
+    ],
+  },
+  {
     title: 'Thought Catalog',
     url: 'http://thoughtcatalog.com/tracy-lum/',
     featured: [],
