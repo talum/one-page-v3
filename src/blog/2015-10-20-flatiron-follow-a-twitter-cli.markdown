@@ -3,7 +3,7 @@ layout: post
 title: "Flatiron Follower, a Twitter CLI"
 date: 2015-10-20T14:10:07-04:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 ![alt text](/images/flatironfollower.png "Flatiron Follower")
 

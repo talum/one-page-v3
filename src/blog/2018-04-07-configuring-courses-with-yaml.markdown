@@ -3,7 +3,7 @@ layout: post
 title: "Configuring Courses with YAML"
 date: 2018-04-07T12:11:24-04:00
 comments: true
-categories: "configuration"
+categories: ["configuration"]
 ---
 
 I've done a lot of onboarding sprints during my time building Learn.co. It

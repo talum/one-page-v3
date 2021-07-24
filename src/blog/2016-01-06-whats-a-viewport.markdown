@@ -3,7 +3,7 @@ layout: post
 title: "What's a Viewport? "
 date: 2016-01-06T12:50:09-05:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 Yesterday, I experienced a big "duh" moment in web design. It's bound to happen when you task yourself with learning how to code in 12 weeks, but this especially was the product of haste and skimming the documentation. 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Advanced SQL, the Sequel: Multiple Joins in Active Record Queries"
-date: 2015-10-31 21:48:06 -04:00
+date: 2015-10-31T21:48:06-04:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 This past Halloween weekend, the only thing truly scary was how much time I spent alternately staring at my laptop screen blankly, downing chocolate-covered espresso beans, and working on the Flatiron BNB lab.

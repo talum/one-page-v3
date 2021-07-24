@@ -70,7 +70,7 @@ module.exports = {
       },
     },
     {
-      resolve: `@andrew-codes/gatsby-plugin-elasticlunr-search`,
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
       options: {
         fields: [
             `title`,

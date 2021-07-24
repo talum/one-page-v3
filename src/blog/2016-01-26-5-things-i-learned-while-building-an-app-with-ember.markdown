@@ -3,7 +3,7 @@ layout: post
 title: "Building a Rails API for Use with Ember"
 date: 2016-01-26T15:12:05-05:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 While I was a student at the Flatiron School, I was introduced to [Ember](http://emberjs.com/), a front-end framework to simplify and streamline all the clunky, client-side JavaScript you end up using to build highly responsive and fast user experiences. Unfortunately, because we only spent a week on it, it felt like we only dipped our toes in the water, so I decided to tackle an Ember project myself to apply some of the concepts I learned as well as learn some new tricks. Here are the results of that exploration. 

@@ -3,7 +3,7 @@ layout: post
 title: "Document Never Ready? Blame Turbolinks"
 date: 2015-12-06T22:31:34-05:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 A few weeks ago, I was working on adding some JavaScript to a multi-page Rails project when I ran into some issues. Whenever I tried to navigate from one page to another, my JavaScript listener functions wouldn't fire.  
