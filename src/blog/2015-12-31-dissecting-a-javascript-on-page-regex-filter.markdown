@@ -3,7 +3,7 @@ layout: post
 title: "Dissecting a JavaScript On-Page RegEx Filter"
 date: 2015-12-31T09:49:18-05:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 It occurred to me while building [Sourcery](https://the-sourcery.herokuapp.com/) that, once our app gains traction and has tons of groups and followers, users might want to be able to filter or search through the massive amounts of information we display on a page. 

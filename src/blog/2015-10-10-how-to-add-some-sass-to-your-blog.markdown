@@ -3,7 +3,7 @@ layout: post
 title: "How to Add Some Sass to Your Blog"
 date: 2015-10-10T20:08:29-04:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 ##Unleash the Power of Sass

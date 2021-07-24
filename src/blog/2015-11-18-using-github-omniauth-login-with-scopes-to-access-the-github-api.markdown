@@ -3,7 +3,7 @@ layout: post
 title: "Using GitHub OmniAuth Login with Scopes to Access the GitHub API"
 date: 2015-11-18T20:53:55-05:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 Using the [OmniAuth gem](https://github.com/intridea/omniauth), it's relatively easy to implement a third-party login for your Rails application. If you read the steps outlined in the documentation and supplement with [this tutorial from Natasha The Robot](http://natashatherobot.com/rails-omniauth-github-tutorial/), you can get set up pretty quickly, which is exactly how I got through the OmniAuth Rails Blog lab in class.  

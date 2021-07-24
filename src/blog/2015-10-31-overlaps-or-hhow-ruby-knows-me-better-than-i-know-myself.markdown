@@ -3,7 +3,7 @@ layout: post
 title: "Overlaps with Ranges and How Ruby Just Gets Me"
 date: 2015-10-31T18:55:00-04:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 Until recently, I didn't think that natural languages and computer languages had much in common. Natural languages, or languages for humans, are normally flexible and varied, having evolved organically over time. In natural languages, there are many ways to say the same thing, with different vocabulary or syntax. And unlike in constructued languages (like computer languages), there is ample room for interpretation, so even if you don't speak a perfectly grammatically correct and complete sentence, it's likely that a native speaker will understand what you're trying to say. 

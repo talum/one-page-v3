@@ -3,7 +3,7 @@ layout: post
 title: "The Benefits of Semantic HTML"
 date: 2015-12-21T17:55:09-05:00
 comments: true
-categories: "Flatiron&nbsp;School"
+categories: ["Flatiron&nbsp;School"]
 ---
 
 Lately I've been researching the pros and cons of writing semantic HTML, and after reading a bunch of articles and taking some time to form my own conclusion, I've decided that it's worth the struggle of mastering it--not for today, but for tomorrow. 
