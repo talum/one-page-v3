@@ -41,6 +41,16 @@ const publicationsList = [
     ],
   },
   {
+    title: 'Feed',
+    url: 'https://feedlitmag.com/',
+    featured: [
+      {
+        title: 'Fei Mui',
+        url: 'https://feedlitmag.com/2021/09/11/issue-2-20/'
+      },
+    ],
+  },
+  {
     title: 'Thought Catalog',
     url: 'http://thoughtcatalog.com/tracy-lum/',
     featured: [],
