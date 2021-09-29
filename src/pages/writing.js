@@ -6,6 +6,16 @@ import SEO from '../components/seo'
 
 const publicationsList = [
   {
+    title: 'Polygon',
+    url: 'https://www.polygon.com/',
+    featured: [
+      {
+        title: "The refreshing cockiness of Mythic Quest's Poppy Li",
+        url: 'https://www.polygon.com/22698659/mythic-quest-poppy-li-appreciation'
+      }
+    ],
+  },
+  {
     title: 'Bustle',
     url: 'https://www.bustle.com/authors/1151-tracy-lum',
     featured: [],
