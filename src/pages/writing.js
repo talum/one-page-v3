@@ -16,9 +16,30 @@ const publicationsList = [
     ],
   },
   {
+    title: 'Shenandoah',
+    url: 'https://shenandoahliterary.org/',
+    featured: [
+      {
+        title: "An American Name",
+        forthcoming: true,
+        url: '',
+        awards: ['Nominated for the Pushcart Prize 2021']
+      }
+    ],
+  },
+  {
     title: 'Bustle',
     url: 'https://www.bustle.com/authors/1151-tracy-lum',
-    featured: [],
+    featured: [
+      {
+        title: "Other Shows Love 'Downton Abbey' As Much As You",
+        url: 'https://www.bustle.com/articles/131216-downton-abbey-gets-as-much-love-from-other-tv-series-as-it-does-from-fans'
+      },
+      {
+        title: "9 Reasons You'll Absolutely Love Ross Poldark",
+        url: 'https://www.bustle.com/articles/96970-ross-poldark-is-the-ultimate-period-drama-gentleman-here-are-9-reasons-hes-your-next-big'
+      },
+    ],
   },
   {
     title: 'Entropy Magazine',
@@ -46,7 +67,8 @@ const publicationsList = [
     featured: [
       {
         title: 'Crafting My Way Toward Accomplishment',
-        url: 'https://herstryblg.com/true/2021/3/25/crafting-my-way-toward-accomplishment'
+        url: 'https://herstryblg.com/true/2021/3/25/crafting-my-way-toward-accomplishment',
+        awards: ['Nominated for the Best of Net 2021']
       },
     ],
   },
@@ -117,28 +139,36 @@ const Writing = () => (
     </p>
     {publicationsList.map((publication, i) => (
       <div key={i} className="module module--newsy util--padding-bxl">
-        <div className="module__head">
+        <div className="module__head flex-container flex-align-items-center flex-justify-content-space-between">
           <h2 className="heading heading--level-3 util--padding-bm">
-            {publication.title}
+            { publication.title }
           </h2>
-        </div>
-        <div className="module__body">
-          <p>
-            <a
+          <h3 className=" heading heading--level-5 util--display-inline util--padding-bm">
+            [<a
               href={publication.url}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {publication.url}
-            </a>
-          </p>
+              Link
+            </a>]
+          </h3>
+        </div>
+        <div className="module__body">
           { !!publication.featured.length &&
             <Fragment>
               <h3>Featured</h3>
               <ul>
-                {publication.featured.map(({title, url}) => (
-                  <li><a href={url} target="_blank" rel="noopener noreferrer">{title}</a></li>
-                ))}
+                {publication.featured.map(({title, url, forthcoming = false, awards = []}) => {
+                  if (!forthcoming) {
+                    return <li>
+                      <a href={url} target="_blank" rel="noopener noreferrer">{title}</a>
+                      { awards.length > 0 && ` *${awards.join(', ')}` }
+                      </li>
+                  } else {
+                    return <li>{title}
+                      { awards.length > 0 && ` *${awards.join(', ')}` }</li>
+                  }
+                })}
               </ul>
             </Fragment>
           }
