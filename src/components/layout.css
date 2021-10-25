@@ -302,6 +302,9 @@ body {
 .util--text-align-c {
   text-align: center;
 }
+.util--display-inline {
+  display: inline;
+}
 
 
 .util--padding-tl   { padding-top: calc(2 * var(--default-padding)); }
@@ -425,6 +428,12 @@ ul li {
 /* Flex Container */
 .flex-container {
   display: flex;
+}
+.flex-align-items-space-center {
+  align-items: center;
+}
+.flex-justify-content-space-between {
+  justify-content: space-between;
 }
 /* Mobile */
 @media only screen and (max-width: 400px) {
