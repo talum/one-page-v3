@@ -21,17 +21,17 @@ const Menu = ({ toggleMenu, toggleDarkMode, open }) => (
         </button>
       </div>
       {menuItems.map(item => (
-        <div key={item.title} className="menu__item">
-          <Link to={item.path} className="link--color-contrast">
-            {item.title}
-          </Link>
-        </div>
+        <Link to={item.path} key={item.title} className="link--undecorated">
+          <button className="menu__item">
+            <span className="heading--color-inverse">{item.title}</span>
+          </button>
+        </Link>
       ))}
     </div>
     <div className="menu__footer">
-      <div className="menu__item" onClick={toggleDarkMode}>
-        <span style={{ cursor: 'pointer' }}>toggle dark mode</span>
-      </div>
+      <button className="menu__item" onClick={toggleDarkMode}>
+        <span className="heading--color-inverse">toggle dark mode</span>
+      </button>
     </div>
   </menu>
 )

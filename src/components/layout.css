@@ -167,7 +167,9 @@ body {
   padding: 5%;
   text-align: center;
   transition: all 0.2s ease-out;
-  width: 90%;
+  width: 100%;
+  background-color: inherit;
+  cursor: pointer;
 }
 .menu__item--offset {
   align-items: flex-end;
@@ -297,6 +299,9 @@ body {
   font-size: 0.87rem;
   line-height: 1.1rem;
 }
+.heading--color-inverse {
+  color: var(--contrast-color);
+}
 
 /* Utils */
 .util--text-align-c {
@@ -393,6 +398,10 @@ a.link--color-contrast:hover {
   padding: 0;
   border: 0;
 }
+a.link--undecorated {
+  padding: 0;
+  border: 0;
+}
 
 /* List */
 ol li, ul li {
@@ -446,6 +455,7 @@ ul li {
 /* Buttons */
 .button {
   --button--small-size: 16px;
+  cursor: pointer;
 }
 .button a {
   color: inherit;
