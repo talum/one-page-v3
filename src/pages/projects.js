@@ -5,6 +5,20 @@ import SEO from '../components/seo'
 
 const projectsList = [
   {
+    title: 'Fixed-width font support in Markdown-enabled fields',
+    img_url: '',
+    tech: 'Rails',
+    description: 'Use a fixed-width font when writing Markdown so you never mess up the whitespace',
+    link: 'https://github.blog/changelog/2021-09-30-footnotes-now-supported-in-markdown-fields'
+  },
+  {
+    title: 'Support for Footnotes in Markdown on GitHub',
+    img_url: '',
+    tech: 'Rails',
+    description: 'Updated a bunch of gems and our internal HTML pipeline to enable support for footnotes in markdown fields!',
+    link: 'https://github.blog/changelog/2021-09-30-footnotes-now-supported-in-markdown-fields'
+  },
+  {
     title: 'Vimeo OTT Promotions',
     img_url: '',
     tech: 'Rails, React',
@@ -110,6 +124,7 @@ const Projects = () => (
           <h3 className="heading heading--level-4">{project.tech}</h3>
           <h3 className="heading heading--level-4">{project.integrations}</h3>
           <p>{project.description}</p>
+          { !!project.link && <p><a href={`${project.link}`} target="_blank">Read more</a></p> }
         </div>
       </div>
     ))}
