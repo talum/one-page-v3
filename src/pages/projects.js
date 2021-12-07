@@ -5,10 +5,10 @@ import SEO from '../components/seo'
 
 const projectsList = [
   {
-    title: 'Fixed-width font support in Markdown-enabled fields',
+    title: 'Fixed-width font support in Markdown-enabled fields on GitHub',
     img_url: '',
     tech: 'Rails',
-    description: 'Use a fixed-width font when writing Markdown so you never mess up the whitespace',
+    description: 'Introduced a new setting so that users can use a fixed-width font when writing Markdown. Never mess up the whitespace again',
     link: 'https://github.blog/changelog/2021-09-30-footnotes-now-supported-in-markdown-fields'
   },
   {
