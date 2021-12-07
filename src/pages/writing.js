@@ -135,7 +135,7 @@ const Writing = () => (
       Writing
     </h1>
     <p>
-      In my free time, I like to write! Here are some places I've been published. To read other things by me, check out my <Link to={'/blog'}>blog</Link>. I am currently working on a memoir about how I went from publishing to coding.
+      In my free time, I like to write! Here are some places I've been published. To read other things by me, check out my <Link to={'/blog'}>blog</Link>.
     </p>
     {publicationsList.map((publication, i) => (
       <div key={i} className="module module--newsy util--padding-bxl">

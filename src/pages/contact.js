@@ -21,8 +21,7 @@ const Contact = () => (
       >
         Twitter
       </a>
-      . Alternatively, send me an email at{' '}
-      <a href="mailto:tracyalum+website@gmail.com">tracy.a.lum@gmail.com</a>.
+      .
     </p>
   </Layout>
 )
