@@ -21,8 +21,7 @@ const publicationsList = [
     featured: [
       {
         title: "An American Name",
-        forthcoming: true,
-        url: '',
+        url: 'https://shenandoahliterary.org/711/an-american-name/',
         awards: ['Nominated for the Pushcart Prize 2021']
       }
     ],
