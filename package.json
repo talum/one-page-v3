@@ -16,7 +16,7 @@
     "gatsby-remark-embed-gist": "^1.1.4",
     "gatsby-remark-prismjs": "^5.7.0",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-transformer-remark": "^4.7.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.10.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
