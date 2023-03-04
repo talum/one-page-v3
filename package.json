@@ -7,7 +7,7 @@
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
     "gatsby": "^3.10.1",
     "gatsby-image": "^3.10.0",
-    "gatsby-plugin-feed": "^3.10.0",
+    "gatsby-plugin-feed": "^3.15.0",
     "gatsby-plugin-google-analytics": "^3.10.0",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-offline": "^4.10.0",
