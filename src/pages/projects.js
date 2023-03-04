@@ -5,6 +5,13 @@ import SEO from '../components/seo'
 
 const projectsList = [
   {
+    title: 'Pull Requests file tree on GitHub',
+    img_url: '',
+    tech: 'Rails, Catalyst',
+    description: 'Added the pull requests file tree',
+    link: 'https://github.blog/changelog/2022-03-16-pull-request-file-tree-beta/'
+  },
+  {
     title: 'Fixed-width font support in Markdown-enabled fields on GitHub',
     img_url: '',
     tech: 'Rails',
