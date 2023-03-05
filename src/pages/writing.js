@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const publicationsList = [
   {
@@ -129,7 +129,7 @@ const publicationsList = [
 
 const Writing = () => (
   <Layout>
-    <SEO title="Writing" />
+    <Seo title="Writing" />
     <h1 className="heading heading--level-1 util--text-align-c util--padding-bxxl">
       Writing
     </h1>

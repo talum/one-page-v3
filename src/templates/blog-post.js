@@ -1,14 +1,14 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
-export default ({ data }) => {
+export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
       <div className="blog">
-        <SEO title={post.frontmatter.title} />
+        <Seo title={post.frontmatter.title} />
         <h1 className="heading heading--level-1 util--padding-bxl">
           {post.frontmatter.title}
         </h1>
