@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const projectsList = [
   {
@@ -109,7 +109,7 @@ const projectsList = [
 
 const Projects = () => (
   <Layout>
-    <SEO title="Projects" />
+    <Seo title="Projects" />
     <h1 className="heading heading--level-1 util--text-align-c util--padding-bxxl">
       Projects
     </h1>
@@ -124,7 +124,7 @@ const Projects = () => (
           <h3 className="heading heading--level-4">{project.tech}</h3>
           <h3 className="heading heading--level-4">{project.integrations}</h3>
           <p>{project.description}</p>
-          { !!project.link && <p><a href={`${project.link}`} target="_blank">Read more</a></p> }
+          { !!project.link && <p><a href={`${project.link}`} target="_blank" rel="noreferrer">Read more</a></p> }
         </div>
       </div>
     ))}

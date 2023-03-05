@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Index } from 'elasticlunr'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import qs from 'query-string'
 
 export const query = graphql`
@@ -60,7 +60,7 @@ export default class Search extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Search" />
+        <Seo title="Search" />
         <h1 className="heading heading--level-1 util--text-align-c util--padding-bxxl">
           Search Results for &lsquo;{this.state.query}&rsquo;
         </h1>

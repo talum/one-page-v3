@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const Contact = () => (
   <Layout>
-    <SEO
+    <Seo
       title="Contact"
       meta={[{ name: 'robots', content: 'noindex, nofollow' }]}
     />

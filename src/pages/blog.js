@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
-export default ({ data }) => {
+export default function Blog({ data }) {
   return (
     <Layout>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <h1 className="heading heading--level-1 util--text-align-c util--padding-bl">
         Blog
       </h1>
