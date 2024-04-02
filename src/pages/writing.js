@@ -41,6 +41,16 @@ const publicationsList = [
     ],
   },
   {
+    title: 'Change Seven',
+    url: 'https://changesevenmag.com/',
+    featured: [
+      {
+        title: 'Falling in Love, with Taylor Swift',
+        url: 'https://changesevenmag.com/falling-in-love-with-taylor-swift-by-tracy-lum/'
+      },
+    ],
+  },
+  {
     title: 'Entropy Magazine',
     url: 'https://entropymag.org/',
     featured: [
