@@ -27,6 +27,24 @@ const publicationsList = [
     ],
   },
   {
+    title: 'HerStry',
+    url: 'https://herstryblg.com/',
+    featured: [
+      {
+        title: 'Buying Time',
+        url: 'https://herstryblg.com/eunice-williams-prize/2024/4/2/second-place-buying-time',
+        awards: ['The Eunice Williams Nonfiction Prize, 2nd place'],
+        pubDate: 'April 2024',
+      },
+      {
+        title: 'Crafting My Way Toward Accomplishment',
+        url: 'https://herstryblg.com/true/2021/3/25/crafting-my-way-toward-accomplishment',
+        awards: ['Nominated for the Best of Net 2021'],
+        pubDate: 'March 2021',
+      },
+    ],
+  },
+  {
     title: 'Bustle',
     url: 'https://www.bustle.com/authors/1151-tracy-lum',
     featured: [
