@@ -11,7 +11,8 @@ const publicationsList = [
     featured: [
       {
         title: "The refreshing cockiness of Mythic Quest's Poppy Li",
-        url: 'https://www.polygon.com/22698659/mythic-quest-poppy-li-appreciation'
+        url: 'https://www.polygon.com/22698659/mythic-quest-poppy-li-appreciation',
+        pubDate: 'September 2021',
       }
     ],
   },
@@ -22,8 +23,27 @@ const publicationsList = [
       {
         title: "An American Name",
         url: 'https://shenandoahliterary.org/711/an-american-name/',
-        awards: ['Nominated for the Pushcart Prize 2021', 'Notable in Best American Essays 2022']
+        awards: ['Nominated for the Pushcart Prize 2021', 'Notable in Best American Essays 2022'],
+        pubDate: 'Fall 2021',
       }
+    ],
+  },
+  {
+    title: 'HerStry',
+    url: 'https://herstryblg.com/',
+    featured: [
+      {
+        title: 'Buying Time',
+        url: 'https://herstryblg.com/eunice-williams-prize/2024/4/2/second-place-buying-time',
+        awards: ['The Eunice Williams Nonfiction Prize, 2nd place'],
+        pubDate: 'April 2024',
+      },
+      {
+        title: 'Crafting My Way Toward Accomplishment',
+        url: 'https://herstryblg.com/true/2021/3/25/crafting-my-way-toward-accomplishment',
+        awards: ['Nominated for the Best of Net 2021'],
+        pubDate: 'March 2021',
+      },
     ],
   },
   {
@@ -32,11 +52,13 @@ const publicationsList = [
     featured: [
       {
         title: "Other Shows Love 'Downton Abbey' As Much As You",
-        url: 'https://www.bustle.com/articles/131216-downton-abbey-gets-as-much-love-from-other-tv-series-as-it-does-from-fans'
+        url: 'https://www.bustle.com/articles/131216-downton-abbey-gets-as-much-love-from-other-tv-series-as-it-does-from-fans',
+        pubDate: 'January 2016',
       },
       {
         title: "9 Reasons You'll Absolutely Love Ross Poldark",
-        url: 'https://www.bustle.com/articles/96970-ross-poldark-is-the-ultimate-period-drama-gentleman-here-are-9-reasons-hes-your-next-big'
+        url: 'https://www.bustle.com/articles/96970-ross-poldark-is-the-ultimate-period-drama-gentleman-here-are-9-reasons-hes-your-next-big',
+        pubDate: 'July 2015',
       },
     ],
   },
@@ -46,7 +68,8 @@ const publicationsList = [
     featured: [
       {
         title: 'Falling in Love, with Taylor Swift',
-        url: 'https://changesevenmag.com/falling-in-love-with-taylor-swift-by-tracy-lum/'
+        url: 'https://changesevenmag.com/falling-in-love-with-taylor-swift-by-tracy-lum/',
+        pubDate: 'April 2024',
       },
     ],
   },
@@ -66,18 +89,8 @@ const publicationsList = [
     featured: [
       {
         title: 'The Old Lady',
-        url: 'http://matterpress.com/journal/2021/03/18/cnf-the-old-lady/'
-      },
-    ],
-  },
-  {
-    title: 'HerStry',
-    url: 'https://herstryblg.com/',
-    featured: [
-      {
-        title: 'Crafting My Way Toward Accomplishment',
-        url: 'https://herstryblg.com/true/2021/3/25/crafting-my-way-toward-accomplishment',
-        awards: ['Nominated for the Best of Net 2021']
+        url: 'http://matterpress.com/journal/2021/03/18/cnf-the-old-lady/',
+        pubDate: 'March 2021',
       },
     ],
   },
@@ -87,7 +100,8 @@ const publicationsList = [
     featured: [
       {
         title: 'Fei Mui',
-        url: 'https://feedlitmag.com/2021/09/11/issue-2-20/'
+        url: 'https://feedlitmag.com/2021/09/11/issue-2-20/',
+        pubDate: 'September 2021',
       },
     ],
   },
@@ -102,11 +116,13 @@ const publicationsList = [
     featured: [
       {
         title: 'What Your Face Mask Says About You This Pandemic Season',
-        url: 'https://littleoldladycomedy.com/2020/03/16/what-your-face-mask-says-about-you-this-pandemic-season/'
+        url: 'https://littleoldladycomedy.com/2020/03/16/what-your-face-mask-says-about-you-this-pandemic-season/',
+        pubDate: 'March 2020',
       },
       {
         title: 'Group Party Games Repurposed for One (Quarantine Edition)',
-        url: 'https://littleoldladycomedy.com/2020/04/23/group-party-games-repurposed-for-one-quarantine-edition/'
+        url: 'https://littleoldladycomedy.com/2020/04/23/group-party-games-repurposed-for-one-quarantine-edition/',
+        pubDate: 'April 2020',
       },
     ],
   },
@@ -167,11 +183,12 @@ const Writing = () => (
             <Fragment>
               <h3>Featured</h3>
               <ul>
-                {publication.featured.map(({title, url, forthcoming = false, awards = []}) => {
+                {publication.featured.map(({title, url, forthcoming = false, awards = [], pubDate}) => {
                   if (!forthcoming) {
                     return <li>
                       <a href={url} target="_blank" rel="noopener noreferrer">{title}</a>
                       { awards.length > 0 && ` *${awards.join(', ')}` }
+                      { pubDate && `, ${pubDate}` }
                       </li>
                   } else {
                     return <li>{title}
